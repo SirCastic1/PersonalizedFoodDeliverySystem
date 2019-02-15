@@ -9,16 +9,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link PackageInfo.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link PackageInfo#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 
 public class PackageInfo extends Fragment {
 
@@ -26,5 +20,14 @@ public class PackageInfo extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_package_info, container, false);
+
+
     }
+
+
+
+
+
 }
+
+

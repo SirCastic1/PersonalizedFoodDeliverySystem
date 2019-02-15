@@ -1,30 +1,26 @@
 package com.viit.uaha;
 
-import com.google.firebase.firestore.Exclude;
 
 public class DbHandler {
 
-    private String email;
     private String BMI;
     private String height;
     private String weight;
+    private String DocumentId;
 
 
     public DbHandler() {
         //public no-arg constructor needed
     }
 
-    public DbHandler(String email, String BMI) {
-        this.email = email;
+    public DbHandler(String DocumentId, String BMI) {
+        this.DocumentId=DocumentId;
         this.BMI = BMI;
-
     }
 
 
-
-
-    public String getEmail() {
-        return email;
+    public String getDocumentId(){
+        return DocumentId;
     }
 
     public String getBMI() {
@@ -40,4 +36,16 @@ public class DbHandler {
     public void setBMI(String BMI){
         this.BMI=BMI;
     }
+    public void setDocumentId(String DocumentId){
+        this.DocumentId=DocumentId;
+    }
+
+    public String getHeight(){
+        return height;
+    }
+
+    public String getWeight(){
+        return weight;
+    }
+
 }
