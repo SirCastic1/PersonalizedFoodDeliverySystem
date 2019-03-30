@@ -14,9 +14,9 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="bottom|center_horizontal"
             android:gravity="center"
-            android:text="Today"
+            android:text="Upcoming meal"
             android:textSize="24sp" />
 
         <TextView
@@ -35,7 +35,8 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tomorrow"
+            android:layout_gravity="bottom"
+            android:text="Following meal"
             android:textAlignment="center"
             android:textSize="24sp" />
 

@@ -1,6 +1,7 @@
 package com.viit.uaha;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -37,6 +38,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,7 +62,38 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+
+
+        switch (id){
+            case R.id.action_help:
+                Toast.makeText(this, "Contact Customer Care", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_settings:
+                Toast.makeText(this, "To Be Implemented", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_exit:
+                final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Do you really want to Exit ?");
+                builder.setCancelable(true);
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                });
+                android.support.v7.app.AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+                break;
+        }
+        return true;
+    }
+        /*noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Toast.makeText(this, "To be implemented", Toast.LENGTH_SHORT).show();
             return true;
@@ -85,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+*/
 
     //navbar
 
@@ -127,16 +160,122 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-public void showMessage(String title,StringBuffer Message)
+    public void showMessage(final String title, StringBuffer Message)
     {
-    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final DocumentReference noteRef=db.collection("Customers").document(currentEmail());
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(Message);
-        builder.show();
+        //builder.show();
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        builder.setPositiveButton("Select", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                noteRef.update("Selected",title);
+
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+
+
+public void loadRecommend(View v) {
+
+        DocumentReference Rec;
+        Rec=db.document("Customers/"+currentEmail());
+final TextView tv=findViewById(R.id.textView14);
+    Rec
+            .get()
+            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                       @Override
+                                       public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                           if (task.isSuccessful()) {
+                                               DocumentSnapshot document = task.getResult();
+                                               if (document.exists()) {
+                                                   Object recommended=document.get("Recommended");
+
+                                                   tv.setText(recommended.toString());
+                                               }
+
+                                               else {
+                                                   Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
+                                               }
+                                           } else {
+                                               Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
+                                               task.getException();
+                                           }
+
+
+                                       }
+            });
+
 }
+//connect current email with document here. find recommended package and return text
+    //compare with cusines collection for info
+
+    public void selectRecommend(View v)
+    {
+        TextView tv=findViewById(R.id.textView14);
+        final String Package=tv.toString();
+        DocumentReference m;
+        m=db.document("cusines/"+Package);
+
+        final StringBuffer buffer = new StringBuffer();
+
+        m
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                int numb=1;
+                                String pretty;
+                                for(Object item : document.getData().values()) {
+
+                                    buffer.append("\n\nDay "+numb+"\n\n");
+                                    pretty=item.toString();
+                                    pretty=pretty.replaceAll("\\{","");
+                                    pretty=pretty.replaceAll("\\}","");
+                                    pretty=pretty.replaceAll("\\,","\n");
+                                    pretty =pretty.replaceAll("type1=","");
+                                    pretty =pretty.replaceAll("type2=","");
+                                    pretty =pretty.replaceAll("type3=","");
+
+                                    buffer.append(pretty);
+
+                                    numb++;
+                                }
+                                showMessage(Package, buffer);
+                            }
+                            else {
+                                Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                            task.getException();
+                        }
 
 
+                    }
+                });
+
+
+
+
+    }
 
 
     public void loadMeals(View v) {
@@ -146,30 +285,115 @@ public void showMessage(String title,StringBuffer Message)
 
         switch(v.getId())
         {
-            case R.id.textView2:
-                m = db.document("cusines/Maharashtrian-Normal");
-                Package="Maharashtrian";
+            //MAHARASHTRIAN
+
+            case R.id.button10:
+                m = db.document("cusines/Maharashtrian-Vegetarian");
+                Package="Maharashtrian-Vegetarian";
                 break;
-            case R.id.textView6:
+            case R.id.button11:
+                m = db.document("cusines/Maharashtrian-Nor");
+                Package="Maharashtrian-Nor";
+                break;
+
+
+
+            //CHINESE
+            case R.id.button2:
+                m = db.document("cusines/Chinese-Normal");
+                Package="Chinese-Normal";
+                break;
+            case R.id.button12:
+                m = db.document("cusines/Chinese-Vegetarian");
+                Package="Chinese-Vegetarian";
+                break;
+            case R.id.button13:
+                m = db.document("cusines/Chinese-Jain");
+                Package="Chinese-Jain";
+                break;
+            case R.id.button14:
                 m = db.document("cusines/Chinese-Vegan");
-                Package="Chinese";
+                Package="Chinese-Vegan";
                 break;
-            case R.id.textView7:
-                m = db.document("cusines/Maharashtrian-Normal");
-                Package="Maharashtrian";
+
+
+            //LEBANESE
+
+            case R.id.button15:
+                m = db.document("cusines/Lebanese-Veg");
+                Package="Lebanese-Veg";
                 break;
-            case R.id.textView10:
+            case R.id.button16:
+                m = db.document("cusines/Lebanese-Nor");
+                Package="Lebanese-Nor";
+                break;
+
+            //THAI
+
+            case R.id.button18:
+                m = db.document("cusines/Thai-Veg");
+                Package="Thai-Veg";
+                break;
+            case R.id.button19:
+                m = db.document("cusines/Thai-Nor");
+                Package="Thai-Nor";
+                break;
+
+
+            //WESTERN
+
+            case R.id.button21:
+                m = db.document("cusines/Western-Veg");
+                Package="Western-Veg";
+                break;
+            case R.id.button22:
+                m = db.document("cusines/Western Nor");
+                Package="Western Nor";
+                break;
+
+
+
+
+            //PUNJABI
+            case R.id.button6:
                 m = db.document("cusines/Punjabi-Normal");
-                Package="Punjabi";
+                Package="Punjabi-Normal";
                 break;
-            case R.id.textView9:
-                m = db.document("cusines/Maharashtrian-Normal");
-                Package="Maharashtrian";
+            case R.id.button24:
+                m = db.document("cusines/Punjabi-Vegetarian");
+                Package="Punjabi-Vegetarian";
                 break;
-            case R.id.textViewPunjabi:
-                m = db.document("cusines/Punjabi-Normal");
-                Package="Punjabi";
+            case R.id.button25:
+                m = db.document("cusines/Punjabi-Jain");
+                Package="Punjabi-Jain";
                 break;
+            case R.id.button26:
+                m = db.document("cusines/Punjabi-Vegan");
+                Package="Punjabi-Vegan";
+                break;
+
+                //Health
+
+            case R.id.button9:
+                m = db.document("cusines/Lowbmi-Vegetarian");
+                Package="Lowbmi-Vegetarian";
+                break;
+            case R.id.button17:
+                m = db.document("cusines/Lowbmi-nonvegtarian");
+                Package="Lowbmi-nonvegtarian";
+                break;
+            case R.id.button20:
+                m = db.document("cusines/Highbmi-Vegetarian");
+                Package="Highbmi-Vegetarian";
+                break;
+            case R.id.button23:
+                m = db.document("cusines/Highbmi-nonvegetarian");
+                Package="Highbmi-nonvegetarian";
+                break;
+
+
+
+
             default:
                 m = db.document("cusines/Punjabi-Vegetarian");
                 Package="Punjabi";
@@ -182,6 +406,7 @@ public void showMessage(String title,StringBuffer Message)
         //System.out.println(simpleDateformat.format(now));
 
         final StringBuffer buffer = new StringBuffer();
+        DocumentReference noteRef=db.collection("Customers").document(currentEmail());
 
 
         m
@@ -212,7 +437,7 @@ public void showMessage(String title,StringBuffer Message)
                                     showMessage(Package, buffer);
                                 }
                              else {
-                                Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Error doc doesnt exisst", Toast.LENGTH_SHORT).show();
                             }
                         } else {
                             Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
@@ -234,19 +459,32 @@ public void showMessage(String title,StringBuffer Message)
         //today
         Date now = new Date();
         SimpleDateFormat simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
-        final String day=simpleDateformat.format(now);
+         String d=simpleDateformat.format(now);
 
 
-        //tomorrow
+        if(d.equals("Saturday")||d.equals("Sunday"))
+           d="Monday";
+        final String day=d;
+
+
+
         Date dt = new Date();
         Calendar c = Calendar.getInstance();
         c.setTime(dt);
-        c.add(Calendar.DATE, 4);
+        c.add(Calendar.DATE, 1);
         dt = c.getTime();
         simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
-        final String dayTomorrow=simpleDateformat.format(dt);
+         String dayT=simpleDateformat.format(dt);
 
-        //
+         if(dayT.equals("Saturday"))
+
+            dayT="Monday";
+        else if(dayT.equals("Sunday"))
+            dayT="Tuesday";
+
+        final String dayTomorrow=dayT;
+
+
 
         final TextView textToday=findViewById(R.id.textToday);
         final TextView textTom=findViewById(R.id.textTomorrow);
@@ -274,7 +512,7 @@ public void showMessage(String title,StringBuffer Message)
                                 pretty =pretty.replaceAll("type2=","");
                                 pretty =pretty.replaceAll("type3=","");
 
-                                textToday.setText(pretty);
+                                textToday.setText(day+"\n"+pretty);
 
                             item=document.getData().get(dayTomorrow);
 
@@ -285,7 +523,7 @@ public void showMessage(String title,StringBuffer Message)
                             pretty =pretty.replaceAll("type1=","");
                             pretty =pretty.replaceAll("type2=","");
                                 pretty =pretty.replaceAll("type3=","");
-                            textTom.setText(pretty);
+                            textTom.setText(dayTomorrow+"\n"+pretty);
                         }
 
 
@@ -346,7 +584,25 @@ public void showMessage(String title,StringBuffer Message)
     private DocumentReference Doc=Ref.document(currentEmail());
 
 
-
+    public void onBackPressed(){
+        final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Do you really want to Exit ?");
+        builder.setCancelable(true);
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
 
         public String currentEmail()
         {
@@ -357,64 +613,46 @@ public void showMessage(String title,StringBuffer Message)
             return user.getEmail();
         }
 
-        public void updateHW(View v)
-        {   String emailAuth=currentEmail();
-
-            EditText editTextH=findViewById(R.id.editTextH);
-            EditText editTextW=findViewById(R.id.editTextW);
-
-           final String height=editTextH.getText().toString();
-           final String weight=editTextW.getText().toString();
-            float h=Float.parseFloat(height);
-            float w=Float.parseFloat(weight);
-            float bmi=w/((h/100)*(h/100));
-            final String BMI= String.format("%.2f", bmi);
-
-            Toast.makeText(MainActivity.this,"Updated", Toast.LENGTH_LONG).show();
-
-            Ref.document(currentEmail()).update("height",height,"weight",weight,"BMI",BMI);
-
-            Toast.makeText(MainActivity.this,"Updated", Toast.LENGTH_LONG).show();
 
 
-        }
+    public void loadNotes(View v)
+    {
+        final TextView bmi=findViewById(R.id.textView13);
 
 
 
+        Doc
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
 
-        public void loadNotes(View v)
-        {
-           final TextView bmi=findViewById(R.id.textView13);
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
 
+                        DbHandler note = documentSnapshot.toObject(DbHandler.class);
+                        String BMI = note.getBMI();
+                        String Height=note.getHeight();
+                        String Weight=note.getWeight();
 
-
-                    Doc
-                    .get()
-                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-
-                                DbHandler note = documentSnapshot.toObject(DbHandler.class);
-                                String BMI = note.getBMI();
-                                String height=note.getHeight();
-                                String weight=note.getWeight();
-
-                                //Toast.makeText(MainActivity.this, currentEmail() + "  Your Bmi is :" + BMI, Toast.LENGTH_LONG).show();
-                            bmi.setText("Height:"+height+"\nWeight:"+weight+"\nYour Bmi is :" + BMI);
+                        //Toast.makeText(MainActivity.this, currentEmail() + "  Your Bmi is :" + BMI, Toast.LENGTH_LONG).show();
+                        bmi.setText("\t\t\t\tHeight:"+Height+"\n\n\t\t\t\tWeight:"+Weight+"\n\n\n\t\t\t\tYour Bmi is : " + BMI);
+                        bmi.setTextSize(26);
 
 
-                        }
 
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_LONG).show();
-                        }
-                    });
 
-        }
+
+
+                    }
+
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, "Error encountered, Kindly update details", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+    }
 
 
 }

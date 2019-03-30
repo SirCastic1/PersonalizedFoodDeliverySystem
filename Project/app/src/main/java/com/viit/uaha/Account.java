@@ -41,7 +41,9 @@ public class Account extends Fragment {
 
 
         TextView textView = (TextView) view.findViewById(R.id.textView);
-        textView.setText("You are signed in as "+email);
+        textView.setText("Welcome "+email);
+        textView.setTextSize(32);
+
 
 
 

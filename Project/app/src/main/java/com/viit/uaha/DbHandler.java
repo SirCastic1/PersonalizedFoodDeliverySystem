@@ -1,11 +1,11 @@
-package com.viit.uaha;
+    package com.viit.uaha;
 
 
 public class DbHandler {
 
     private String BMI;
-    private String height;
-    private String weight;
+    private String Height;
+    private String Weight;
     private String DocumentId;
 
 
@@ -27,11 +27,11 @@ public class DbHandler {
         return BMI;
     }
 
-    public void setHeight(String height){
-        this.height=height;
+    public void setHeight(String Height){
+        this.Height=Height;
     }
-    public void setWeight(String weight){
-        this.weight=weight;
+    public void setWeight(String Weight){
+        this.Weight=Weight;
     }
     public void setBMI(String BMI){
         this.BMI=BMI;
@@ -41,11 +41,11 @@ public class DbHandler {
     }
 
     public String getHeight(){
-        return height;
+        return Height;
     }
 
     public String getWeight(){
-        return weight;
+        return Weight;
     }
 
 }
