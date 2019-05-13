@@ -8,7 +8,9 @@ Finding target class Recommended Package based on users Food preferences,likes,a
 Files:
 
 uaha.csv:Original dataset
+
 preprocess.py:converts uaha.csv to x.csv after preprocessing
+
 rf.py (trains the model and generates Saved Model)
 
 x.csv (dataset formed using preprocess.py on uaha.csv(original dataset))
