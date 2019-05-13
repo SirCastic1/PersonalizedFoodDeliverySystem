@@ -18,7 +18,6 @@ Timestamp,Food Types ( You can select more than one),Taste.Preferences,Height(cm
 07/10/2018 15:08:31,Vegan,Medium-Spicy,155,60,None,Punjabi,No,Other,49,24.9739854318418,BMI-Low
 07/10/2018 15:08:32,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Medium-Spicy,160.6,65,None,"Thai, Chinese, Maharashtrian, Western",No,Other,59,25.2012611486502,BMI-Low
 07/10/2018 15:08:49,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,184,83,None,Western,No,Other,52,24.515595463138,BMI-Low
-07/10/2018 15:08:54,Non Vegetarian,Medium-Spicy,186,83,Prawns,None,No,Other,42,23.9912128569777,Punjabi-Normal
 07/10/2018 15:09:07,"Vegetarian, Egg, Non Vegetarian",Spicy,167,45,None,"Chinese, Punjabi",No,NIBM/Kondhwa,33,16.1353938828929,BMI-High
 07/10/2018 15:09:22,Vegetarian,Spicy,156,49.5,None,Maharashtrian,No,Other,42,20.3402366863905,Maharashtrian-Vegetarian
 07/10/2018 15:09:30,Vegetarian,Medium-Spicy,187,80,Peanuts,Maharashtrian,No,Kharadi,49,22.8774057021934,Maharashtrian-Vegetarian
@@ -107,7 +106,6 @@ Timestamp,Food Types ( You can select more than one),Taste.Preferences,Height(cm
 07/10/2018 17:13:55,Non Vegetarian,Medium-Spicy,170,65,None,"Thai, Punjabi, Lebanese",No,Koregaon Park,57,22.4913494809689,Punjabi-Normal
 07/10/2018 17:14:16,Vegetarian,Medium-Spicy,170,53,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,65,18.3391003460208,Maharashtrian-Vegetarian
 07/10/2018 17:15:18,Non Vegetarian,Medium-Spicy,168,66,None,Chinese,No,Other,23,23.3843537414966,Chinese-Normal
-07/10/2018 17:19:34,Vegetarian,Medium-Spicy,184,70,"Peanuts, Gelatin, Groundnut","Chinese, Punjabi",No,Other,50,20.6758034026465,Chinese-Vegetarian
 07/10/2018 17:20:14,"Vegetarian, Non Vegetarian, Seafood",Medium-Spicy,154,58,None,"Chinese, Lebanese",No,NIBM/Kondhwa,45,24.4560634171024,Chinese-Normal
 07/10/2018 17:20:57,"Vegetarian, Non Vegetarian",Medium-Spicy,177,70,None,"Chinese, Maharashtrian, Punjabi",No,Hadapsar,33,22.3435155925819,Punjabi-Normal
 07/10/2018 17:22:52,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,162,67,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,17,25.5296448712087,Maharashtrian-Nor
@@ -206,7 +204,6 @@ Timestamp,Food Types ( You can select more than one),Taste.Preferences,Height(cm
 26/01/2019 10:41:37,Vegetarian,Medium-Spicy,180,80,None,Punjabi,No,Other,60,24.6913580246914,Punjabi-Vegetarian
 26/01/2019 10:42:19,Non Vegetarian,Bland,190,75,None,Lebanese,Yes,Koregaon Park,47,20.7756232686981,Lebenese-Nor
 26/01/2019 10:42:56,Non Vegetarian,Spicy,180,55,None,"Maharashtrian, Western",No,Koregaon Park,26,16.9753086419753,BMI-High
-26/01/2019 10:47:09,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Medium-Spicy,162,64.3,Prawns,"Thai, Chinese, Maharashtrian, Punjabi, Western",No,Other,40,24.5008382868465,Punjabi-Normal
 26/01/2019 10:47:36,Non Vegetarian,Spicy,167,66,None,"Chinese, Maharashtrian",No,Koregaon Park,26,23.6652443615762,Maharashtrian-Nor
 26/01/2019 10:48:02,Non Vegetarian,Medium-Spicy,170,70,None,Western,No,NIBM/Kondhwa,61,24.2214532871972,Western Nor
 26/01/2019 10:48:30,Non Vegetarian,Medium-Spicy,168,68,None,Maharashtrian,No,Kothrud,34,24.092970521542,Maharashtrian-Nor
