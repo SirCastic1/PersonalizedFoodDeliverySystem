@@ -534,46 +534,13 @@ final TextView tv=findViewById(R.id.textView14);
 
     public void menuDay(View v) {
 
-        DocumentReference m = db.document("cusines/Punjabi-Normal");
+         //update from db
 
-
-        //today
-        Date now = new Date();
-        SimpleDateFormat simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
-         String d=simpleDateformat.format(now);
-
-
-        if(d.equals("Saturday")||d.equals("Sunday"))
-           d="Monday";
-        final String day=d;
-
-
-
-        Date dt = new Date();
-        Calendar c = Calendar.getInstance();
-        c.setTime(dt);
-        c.add(Calendar.DATE, 1);
-        dt = c.getTime();
-        simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
-         String dayT=simpleDateformat.format(dt);
-
-         if(dayT.equals("Saturday"))
-
-            dayT="Monday";
-        else if(dayT.equals("Sunday"))
-            dayT="Tuesday";
-
-        final String dayTomorrow=dayT;
-
-
-
-        final TextView textToday=findViewById(R.id.textToday);
-        final TextView textTom=findViewById(R.id.textTomorrow);
-
-        final StringBuffer buffer = new StringBuffer();
-
-
-                m
+        final TextView textTitle=findViewById(R.id.textView17);
+        DocumentReference Rec;
+        Rec=db.document("Customers/"+currentEmail());
+        final TextView tv=findViewById(R.id.textView14);
+        Rec
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
@@ -581,45 +548,117 @@ final TextView tv=findViewById(R.id.textView14);
                         if (task.isSuccessful()) {
                             DocumentSnapshot document = task.getResult();
                             if (document.exists()) {
-
-                                String pretty;
-                                Object item=document.getData().get(day);
-
-                                        pretty = item.toString();
-                                        pretty = pretty.replaceAll("\\{", "");
-                                        pretty = pretty.replaceAll("\\}", "");
-                                        pretty = pretty.replaceAll("\\,", "\n");
-                                pretty =pretty.replaceAll("type1=","");
-                                pretty =pretty.replaceAll("type2=","");
-                                pretty =pretty.replaceAll("type3=","");
-
-                                textToday.setText(day+"\n"+pretty);
-
-                            item=document.getData().get(dayTomorrow);
-
-                           pretty = item.toString();
-                            pretty = pretty.replaceAll("\\{", "");
-                            pretty = pretty.replaceAll("\\}", "");
-                            pretty = pretty.replaceAll("\\,", "\n");
-                            pretty =pretty.replaceAll("type1=","");
-                            pretty =pretty.replaceAll("type2=","");
-                                pretty =pretty.replaceAll("type3=","");
-                            textTom.setText(dayTomorrow+"\n"+pretty);
-                        }
+                                Object selected=document.get("Selected");
 
 
+
+
+                                    DocumentReference m = db.document("cusines/" + selected.toString());
+
+
+                                    //today
+                                    Date now = new Date();
+                                    SimpleDateFormat simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
+                                    String d = simpleDateformat.format(now);
+
+
+                                    if (d.equals("Saturday") || d.equals("Sunday"))
+                                        d = "Monday";
+                                    final String day = d;
+
+
+                                    Date dt = new Date();
+                                    Calendar c = Calendar.getInstance();
+                                    c.setTime(dt);
+                                    c.add(Calendar.DATE, 1);
+                                    dt = c.getTime();
+                                    simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
+                                    String dayT = simpleDateformat.format(dt);
+
+                                    if (dayT.equals("Saturday"))
+
+                                        dayT = "Monday";
+                                    else if (dayT.equals("Sunday"))
+                                        dayT = "Tuesday";
+
+                                    final String dayTomorrow = dayT;
+
+
+                                    final TextView textToday = findViewById(R.id.textToday);
+                                    final TextView textTom = findViewById(R.id.textTomorrow);
+                                    final StringBuffer buffer = new StringBuffer();
+
+
+                                    m
+                                            .get()
+                                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                    if (task.isSuccessful()) {
+                                                        DocumentSnapshot document = task.getResult();
+                                                        if (document.exists()) {
+
+                                                            String pretty;
+                                                            Object item = document.getData().get(day);
+
+                                                            pretty = item.toString();
+                                                            pretty = pretty.replaceAll("\\{", "");
+                                                            pretty = pretty.replaceAll("\\}", "");
+                                                            pretty = pretty.replaceAll("\\,", "\n");
+                                                            pretty = pretty.replaceAll("type1=", "");
+                                                            pretty = pretty.replaceAll("type2=", "");
+                                                            pretty = pretty.replaceAll("type3=", "");
+
+                                                            textToday.setText(day + "\n" + pretty);
+
+                                                            item = document.getData().get(dayTomorrow);
+
+                                                            pretty = item.toString();
+                                                            pretty = pretty.replaceAll("\\{", "");
+                                                            pretty = pretty.replaceAll("\\}", "");
+                                                            pretty = pretty.replaceAll("\\,", "\n");
+                                                            pretty = pretty.replaceAll("type1=", "");
+                                                            pretty = pretty.replaceAll("type2=", "");
+                                                            pretty = pretty.replaceAll("type3=", "");
+                                                            textTom.setText(dayTomorrow + "\n" + pretty);
+                                                        } else {
+                                                            Toast.makeText(MainActivity.this, "No package selected, Kindly select", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    } else {
+                                                        Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                                                        task.getException();
+                                                    }
+
+
+                                                }
+                                            });
+
+
+
+
+
+
+                            }
 
                             else {
-                                Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Kindly update preferences in account page and select package", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Kindly update preferences in account page, buy package", Toast.LENGTH_SHORT).show();
                             task.getException();
                         }
 
 
                     }
                 });
+
+
+
+
+
+
+
+
 
     }
 
@@ -696,44 +735,45 @@ final TextView tv=findViewById(R.id.textView14);
 
 
 
-    public void loadNotes(View v)
-    {
-        final TextView bmi=findViewById(R.id.textView13);
+    public void loadNotes(View v) {
 
 
+        final TextView bmi = findViewById(R.id.textView13);
 
+        Doc = db.document("Customers/" + currentEmail());
         Doc
                 .get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                Object BMI1 = document.get("BMI");
+                                Object Height1 = document.get("Height");
+                                Object Weight1 = document.get("Weight");
 
-                        DbHandler note = documentSnapshot.toObject(DbHandler.class);
-                        String BMI = note.getBMI();
-                        String Height=note.getHeight();
-                        String Weight=note.getWeight();
-
-                        //Toast.makeText(MainActivity.this, currentEmail() + "  Your Bmi is :" + BMI, Toast.LENGTH_LONG).show();
-                        bmi.setText("\t\t\t\tHeight:"+Height+"\n\n\t\t\t\tWeight:"+Weight+"\n\n\n\t\t\t\tYour Bmi is : " + BMI);
-                        bmi.setTextSize(26);
-
-
-
+                                String BMI = BMI1.toString();
+                                String Height = Height1.toString();
+                                String Weight = Weight1.toString();
 
 
+                                bmi.setText("\t\t\t\tHeight:" + Height + "\n\n\t\t\t\tWeight:" + Weight + "\n\n\n\t\t\t\tYour Bmi is : " + BMI);
+                                bmi.setTextSize(26);
+                            } else {
+                                Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
+                            task.getException();
+                        }
 
-                    }
 
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MainActivity.this, "Error encountered, Kindly update details", Toast.LENGTH_LONG).show();
                     }
                 });
 
     }
+
 
 
 }

@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#033652"
     tools:context=".Account">
 
     <android.support.constraint.ConstraintLayout
@@ -13,18 +14,20 @@
 
         <Button
             android:id="@+id/button3"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@android:style/Widget.DeviceDefault.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/button_round"
             android:onClick="SignOut"
             android:text="Sign Out"
+            android:textColor="#fff"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -36,15 +39,17 @@
             android:layout_marginEnd="8dp"
             android:singleLine="true"
 
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="24sp"
+            android:textColor="#fff"
+            android:textSize="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="403dp"
+            style="@android:style/Widget.DeviceDefault.Button.Colored"
+            android:layout_width="wrap_content"
+
             android:layout_height="68dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -52,24 +57,27 @@
             android:layout_marginBottom="8dp"
             android:onClick="loadNotes"
             android:text="Calculate BMI"
-            android:textColor="@color/browser_actions_text_color"
+
             android:textSize="22sp"
             app:layout_constraintBottom_toTopOf="@+id/button4"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13"
-            app:layout_constraintVertical_bias="0.532" />
+            app:layout_constraintVertical_bias="0.322" />
 
         <Button
             android:id="@+id/button4"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            style="@android:style/Widget.DeviceDefault.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:background="@drawable/button_round"
             android:onClick="Register"
             android:text="Update Preferences"
+            android:textColor="#fff"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +91,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="80dp"
+            android:textColor="#fff"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/button4"
             app:layout_constraintEnd_toEndOf="parent"

@@ -4,18 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#033652"
     tools:context=".PackageInfo">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#033652"
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:layout_margin="10dp"
-            android:layout_marginTop="25dp"
+            android:layout_height="120dp"
+
+            android:layout_marginTop="23dp"
+
             android:padding="10dp"
             android:paddingTop="25dp">
 
@@ -24,23 +27,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
-                android:text="Recommended Package" />
+                android:layout_marginLeft="15dp"
+
+                android:text="Recommended Package"
+                android:textSize="20dp" />
 
             <Button
                 android:id="@+id/button7"
-                style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                style="@android:style/Widget.DeviceDefault.Button.Colored"
                 android:layout_width="104dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_round"
                 android:onClick="selectRecommend"
                 android:text="Select" />
 
             <Button
                 android:id="@+id/button8"
-                style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                style="@android:style/Widget.DeviceDefault.Button.Colored"
                 android:layout_width="104dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right|top"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_round"
                 android:onClick="loadRecommend"
                 android:text="Load" />
 
@@ -49,21 +62,26 @@
                 android:layout_width="137dp"
                 android:layout_height="32dp"
                 android:layout_gravity="bottom"
-                android:gravity="bottom" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                android:textSize="15dp" />
         </android.support.v7.widget.CardView>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#033652">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#033652"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="170dp"
                     android:layout_margin="20dp"
                     android:clickable="false">
 
@@ -79,20 +97,26 @@
 
                     <Button
                         android:id="@+id/button10"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="right|top"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button11"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:layout_gravity="center|right"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Non Veg"
                         android:textSize="10sp" />
@@ -100,26 +124,26 @@
                     <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/maharashtrana" />
 
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="119dp"
+                    android:layout_height="170dp"
                     android:layout_margin="20dp">
 
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/chinesesa" />
 
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="match_parent"
-                        android:layout_height="126dp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="right"
                         android:clickable="true"
                         android:gravity="center"
@@ -128,43 +152,53 @@
 
                     <Button
                         android:id="@+id/button12"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="right|top"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button2"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Non Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button13"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
-                        android:layout_height="31dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="right"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Jain"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button14"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
-                        android:layout_marginTop="90dp"
+                        android:layout_marginTop="130dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Vegan"
                         android:textSize="10sp" />
@@ -172,7 +206,7 @@
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="170dp"
                     android:layout_margin="20dp"
                     android:animateLayoutChanges="true">
 
@@ -188,20 +222,26 @@
 
                     <Button
                         android:id="@+id/button15"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="24dp"
                         android:layout_gravity="right|top"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button16"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:layout_gravity="center|right"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Non Veg"
                         android:textSize="10sp" />
@@ -209,13 +249,13 @@
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/lebanesea" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="170dp"
                     android:layout_margin="20dp">
 
                     <TextView
@@ -230,20 +270,26 @@
 
                     <Button
                         android:id="@+id/button18"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="right|top"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button19"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:layout_gravity="center|right"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Non Veg"
                         android:textSize="10sp" />
@@ -251,13 +297,13 @@
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/thaia" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="170dp"
                     android:layout_margin="20dp"
                     android:clickable="true">
 
@@ -273,20 +319,26 @@
 
                     <Button
                         android:id="@+id/button21"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="right|top"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button22"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:layout_gravity="center|right"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Non Veg"
                         android:textSize="10sp" />
@@ -300,7 +352,7 @@
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="118dp"
+                    android:layout_height="170dp"
                     android:layout_margin="20dp"
                     android:clickable="false">
 
@@ -317,43 +369,52 @@
 
                     <Button
                         android:id="@+id/button24"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="right|top"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button6"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="right|top"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Non Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button25"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
                         android:layout_gravity="right"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Jain"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button26"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
                         android:layout_gravity="right"
-                        android:layout_marginTop="90dp"
+                        android:layout_marginTop="130dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Vegan"
                         android:textSize="10sp" />
@@ -361,63 +422,80 @@
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/punjabia" />
 
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_margin="20dp" >
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="50dp">
 
                     <Button
                         android:id="@+id/button9"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Low Bmi Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button17"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:layout_gravity="center|left"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="Low Bmi Non Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button27"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
+
                         android:text="Diabetes"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button20"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:layout_gravity="center|right"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="High Bmi Veg"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/button23"
-                        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
+                        style="@android:style/Widget.DeviceDefault.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_gravity="bottom|right"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_round"
                         android:onClick="loadMeals"
                         android:text="High Bmi Non Veg"
                         android:textSize="10sp" />

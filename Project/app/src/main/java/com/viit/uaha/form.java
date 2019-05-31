@@ -410,7 +410,7 @@ public class form extends AppCompatActivity {
 
 
                     note.put("Diabetes",diabetes);
-
+                    note.put("Selected","a");
 
 
 
@@ -426,6 +426,7 @@ public class form extends AppCompatActivity {
                             ,"Allergies.Eggs",eggs
                             ,"Allergies.Peanuts",peanuts
                             ,"Allergies.Soy",soy
+                            ,"Allergies.Wheat",wheat
                             ,"Allergies.Wheat",wheat
                             ,"Allergies.Fish",fish
                             ,"Allergies.Corn",corn
@@ -566,7 +567,6 @@ public class form extends AppCompatActivity {
                             setValue(attributeTastePreferences,tastepreference1 );
                             setValue(attributeDiabetes, diabetes1);
                             setValue(attributeBMI, bmi1);
-
                             setValue(attributeFoodTypeEgg,egg1 );
                             setValue(attributeFoodTypeNonVegetarian, nveg1);
                             setValue(attributeFoodTypeSeafood, seafood1);
@@ -600,7 +600,10 @@ public class form extends AppCompatActivity {
                         double result = mClassifier.classifyInstance(newInstance);
                         String className = classes.get(new Double(result).intValue());
                         String msg =  "Predicted: " + className;
+
                         messi=msg;
+
+
                         target=Integer.parseInt(className);
 
                     } catch (Exception e) {
@@ -694,7 +697,7 @@ public class form extends AppCompatActivity {
 
 
                      final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(form.this);
-                    builder.setMessage("Succesfully Submitted"+messi);
+                    builder.setMessage("Succesfully Submitted");
 
 
                     builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
