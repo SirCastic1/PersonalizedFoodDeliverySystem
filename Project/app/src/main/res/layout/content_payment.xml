@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#033652"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=" "
+    tools:showIn="@layout/activity_main">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="00dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="200dp"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:text="Amount :"
+        android:textAlignment="center"
+        android:textColor="#FDFAFA"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/amount_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAlignment="center"
+
+        android:textColor="#000"
+        android:textSize="35dp" />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/amount_et"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="200dp"
+        android:textColor="#fff"
+        android:ems="10"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:text="Pay To :"
+        android:paddingLeft="20dp" />
+
+
+    <TextView
+        android:id="@+id/upi_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/amount_et"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:textSize="18dp"
+
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:text="harshalsolanki97@oksbi"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+
+    <!--<EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/upi_id"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp" />
+    -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/upi_id"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginRight="40dp"
+        android:textColor="#fff"
+        android:ems="10"
+        android:text="UAHA MEALS"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="45dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+
+
+    <EditText
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/upi_id"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:hint="Notes"
+        android:paddingLeft="20dp" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/note"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button_round"
+        android:text="Pay By UPI"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

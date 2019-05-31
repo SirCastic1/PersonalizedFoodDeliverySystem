@@ -1,6 +1,7 @@
 package com.viit.uaha;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.renderscript.Sampler;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +39,7 @@ public class form extends AppCompatActivity {
 
     private Classifier mClassifier = null;
     private String messi=null;
+    private int target;
     private Random mRandom = new Random();
 
     public String currentEmail()
@@ -445,7 +447,7 @@ public class form extends AppCompatActivity {
 
                         AssetManager assetManager = getAssets();
                         try {
-                            mClassifier = (Classifier) weka.core.SerializationHelper.read(assetManager.open("cpu.model"));
+                            mClassifier = (Classifier) weka.core.SerializationHelper.read(assetManager.open("randforest.model"));
 
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -563,6 +565,7 @@ public class form extends AppCompatActivity {
                             setValue(attributeTastePreferences,tastepreference1 );
                             setValue(attributeDiabetes, diabetes1);
                             setValue(attributeBMI, bmi1);
+                            setValue(attributeRecommendedPackage,14);
                             setValue(attributeFoodTypeEgg,egg1 );
                             setValue(attributeFoodTypeNonVegetarian, nveg1);
                             setValue(attributeFoodTypeSeafood, seafood1);
@@ -591,19 +594,101 @@ public class form extends AppCompatActivity {
 
                     newInstance.setDataset(dataUnpredicted);
                     try {
+
                         double result = mClassifier.classifyInstance(newInstance);
                         String className = classes.get(new Double(result).intValue());
                         String msg =  "Predicted: " + className;
                         messi=msg;
+                        target=Integer.parseInt(className);
 
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
 
 
+                    String rec=null;
+                    if(target==0)
+                    {
+                        rec="Highbmi-Vegetarian";
+                    }
 
+                    else if(target==1)
+                    {
+                        rec="Lowbmi-Vegetarian";
+                    }
 
-// predict
+                    else if(target==2)
+                    {
+                        rec="Chinese-Normal";
+                    }
+
+                    else if(target==3)
+                    {
+                        rec="Chinese-Vegan";
+                    }
+
+                    else if(target==4)
+                    {
+                        rec="Chinese-Vegetarian";
+                    }
+                    else if(target==5)
+                    {
+                        rec="Diabetes (Type 2)";
+                    }
+
+                    else if(target==6)
+                    {
+                        rec="Lebanese-Nor";
+                    }
+                    else if(target==7)
+                    {
+                        rec="Lebanese-Veg";
+                    }
+                    else if(target==8)
+                    {
+                        rec="Maharashtrian-Nor";
+                    }
+                    else if(target==9)
+                    {
+                        rec="Maharashtrian-Vegetarian";
+                    }
+
+                    else if(target==10)
+                    {
+                        rec="Punjabi-Normal";
+                    }
+
+                    else if(target==11)
+                    {
+                        rec="Punjabi-vegan";
+                    }
+
+                    else if(target==12)
+                    {
+                        rec="Punjabi-Vegetarian";
+                    }
+
+                    else if(target==13)
+                    {
+                        rec="Thai-Nor";
+                    }
+
+                    else if(target==14)
+                    {
+                        rec="Thai-Veg";
+                    }
+
+                    else if(target==15)
+                    {
+                        rec="Western Nor";
+                    }
+                    else if(target==16)
+                    {
+                        rec="Western-Veg";
+                    }
+            final String rec1=rec;
+
+// predict and convert
 
 
                      final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(form.this);
@@ -613,7 +698,13 @@ public class form extends AppCompatActivity {
                     builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent();
+                            intent.putExtra("keyName", rec1);
+                            setResult(RESULT_OK, intent);
                             finish();
+
+
+
                         }
                     });
                     android.support.v7.app.AlertDialog alertDialog = builder.create();
@@ -626,12 +717,7 @@ public class form extends AppCompatActivity {
                 }
 
 
-
-
             }
-
-
-
 
         });
 

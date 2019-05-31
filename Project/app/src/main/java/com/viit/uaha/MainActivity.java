@@ -53,6 +53,9 @@ import weka.classifiers.Classifier;
 public class MainActivity extends AppCompatActivity {
 
 
+    private static final int SECOND_ACTIVITY_REQUEST_CODE = 0;
+    private static final int PAYMENT_ACTIVITY_REQUEST_CODE = 1;
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_scrolling, menu);
@@ -97,34 +100,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-        /*noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Toast.makeText(this, "To be implemented", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        if (id == R.id.action_account) {
-
-            Intent intent = new Intent(this, Login.class);
-            startActivity(intent);
-
-        }
 
 
-        if (id == R.id.action_help) {
-            Toast.makeText(this, "Visit developer page for help", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        if (id == R.id.action_exit) {
-            finish();
-            return true;
-        }
-
-
-        return super.onOptionsItemSelected(item);
-    }
-*/
-
-    //navbar
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -161,10 +138,67 @@ public class MainActivity extends AppCompatActivity {
     public void Register(View view) {
 
         Intent intent = new Intent(this, form.class);
-        startActivity(intent);
+        startActivityForResult(intent,SECOND_ACTIVITY_REQUEST_CODE);
 
     }
-    public void showMessage(final String title, StringBuffer Message)
+
+    private String rec=null; //for recommended package
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // check that it is the SecondActivity with an OK result
+        if (requestCode == SECOND_ACTIVITY_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) { // Activity.RESULT_OK
+
+                // get String data from Intent
+                String returnString = data.getStringExtra("keyName");
+
+                // set text view with string
+
+                final DocumentReference noteRef=db.collection("Customers").document(currentEmail());
+                noteRef.update("Recommended",returnString);
+                rec=returnString;//for recommended package
+            }
+        }
+//PAYMENT ACTIVITY
+        if (requestCode == PAYMENT_ACTIVITY_REQUEST_CODE) {
+
+            if (resultCode == RESULT_OK) { // Activity.RESULT_OK
+
+                // UPDATE DB
+                String returnsel = data.getStringExtra("PACKAGE"); // STRING OF PACKAGE
+
+//                Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+
+
+                final DocumentReference noteRef=db.collection("Customers").document(currentEmail());
+                noteRef.update("Selected",returnsel);
+            }
+
+            if (resultCode == 101)
+            {
+                Toast.makeText(MainActivity.this, "Payment cancelled by user.", Toast.LENGTH_SHORT).show();
+            }
+            if(resultCode==102)
+            {
+                Toast.makeText(MainActivity.this, "Transaction failed.Please try again", Toast.LENGTH_SHORT).show();
+            }
+            if(resultCode==103)
+            {
+                Toast.makeText(MainActivity.this, "Internet connection is not available. Please check and try again", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+    public void showMessage(final String title, StringBuffer Message) //select package and update on DB if yes
     {
         final DocumentReference noteRef=db.collection("Customers").document(currentEmail());
 
@@ -184,14 +218,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                noteRef.update("Selected",title);
+                Intent intent = new Intent(MainActivity.this, payment.class);
+                intent.putExtra("selPACKAGE", title);
+                intent.putExtra("Amount","1");
+                startActivityForResult(intent,PAYMENT_ACTIVITY_REQUEST_CODE);
+
 
             }
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
-
 
 
 public void loadRecommend(View v) {
@@ -228,10 +265,10 @@ final TextView tv=findViewById(R.id.textView14);
 //connect current email with document here. find recommended package and return text
     //compare with cusines collection for info
 
-    public void selectRecommend(View v)
+    public void selectRecommend(View v)  //view recommended package details
     {
-        TextView tv=findViewById(R.id.textView14);
-        final String Package=tv.toString();
+
+        final String Package=rec;
         DocumentReference m;
         m=db.document("cusines/"+Package);
 
