@@ -493,7 +493,7 @@ public class form extends AppCompatActivity {
                     final Attribute attributeLikesThai = new Attribute("Likes.Thai");
 
 
-                    final List<String> classes = new ArrayList<String>() {
+                    final ArrayList<String> classes = new ArrayList<String>() {
                         {
                             add("0");
                             add("1");
@@ -511,6 +511,7 @@ public class form extends AppCompatActivity {
                             add("13");
                             add("14");
                             add("15");
+                            add("16");
 
                         }
                     };
@@ -523,7 +524,6 @@ public class form extends AppCompatActivity {
                             add(attributeTastePreferences);
                             add(attributeDiabetes);
                             add(attributeBMI);
-                            add(attributeRecommendedPackage);
                             add(attributeFoodTypeEgg);
                             add(attributeFoodTypeNonVegetarian);
                             add(attributeFoodTypeSeafood);
@@ -545,6 +545,7 @@ public class form extends AppCompatActivity {
                             add(attributeLikesWestern);
                             add(attributeLikesNone);
                             add(attributeLikesThai);
+                            add(attributeRecommendedPackage);
 
                             Attribute attributeClass = new Attribute("@@class@@", classes);
                             add(attributeClass);
@@ -554,7 +555,7 @@ public class form extends AppCompatActivity {
                     Instances dataUnpredicted = new Instances("TestInstances",
                             attributeList, 1);
 
-                    dataUnpredicted.setClassIndex(3);
+                    dataUnpredicted.setClassIndex(dataUnpredicted.numAttributes()-1);
 
 
                      final int veg1=veg,nveg1=nveg,egg1=egg,vegan1=vegan,seafood1=seafood,milk1=milk,eggs1=eggs,peanuts1=peanuts,soy1=soy,wheat1=wheat,fish1=fish,corn1=corn,gelatin1=gelatin,others1=others,anone1=anone,chinese1=chinese,thai1=thai,mah1=mah,punjabi1=punjabi,lebanese1=lebanese,western1=western,tastepreference1=tastepreference,diabetes1=diabetes;
@@ -565,7 +566,7 @@ public class form extends AppCompatActivity {
                             setValue(attributeTastePreferences,tastepreference1 );
                             setValue(attributeDiabetes, diabetes1);
                             setValue(attributeBMI, bmi1);
-                            setValue(attributeRecommendedPackage,14);
+
                             setValue(attributeFoodTypeEgg,egg1 );
                             setValue(attributeFoodTypeNonVegetarian, nveg1);
                             setValue(attributeFoodTypeSeafood, seafood1);
@@ -587,6 +588,7 @@ public class form extends AppCompatActivity {
                             setValue(attributeLikesWestern,western1 );
                             setValue(attributeLikesNone, 0);
                             setValue(attributeLikesThai, thai1);
+                            setValue(attributeRecommendedPackage,14);
 
 
                         }

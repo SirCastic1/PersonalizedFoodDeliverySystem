@@ -198,36 +198,71 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void showMessage(final String title, StringBuffer Message) //select package and update on DB if yes
+    public void showMessage(final String title, final StringBuffer Message) //select package and update on DB if yes while selecting amount from db
     {
-        final DocumentReference noteRef=db.collection("Customers").document(currentEmail());
+        DocumentReference Rec;
+        Rec=db.document("cusines/AllPrices");
 
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(Message);
-        //builder.show();
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
-        builder.setPositiveButton("Select", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+        Rec
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                Object amt1=document.get(title);
+                                final String pkgamt=amt1.toString();
 
-                Intent intent = new Intent(MainActivity.this, payment.class);
-                intent.putExtra("selPACKAGE", title);
-                intent.putExtra("Amount","1");
-                startActivityForResult(intent,PAYMENT_ACTIVITY_REQUEST_CODE);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                builder.setCancelable(true);
+                                builder.setTitle(title);
+                                builder.setMessage(Message);
+                                //builder.show();
+                                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.cancel();
+                                    }
+                                });
+                                builder.setPositiveButton("Select", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                        Intent intent = new Intent(MainActivity.this, payment.class);
+                                        intent.putExtra("selPACKAGE", title);
+                                        intent.putExtra("Amount",pkgamt);
+                                        startActivityForResult(intent,PAYMENT_ACTIVITY_REQUEST_CODE);
 
 
-            }
-        });
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+                                    }
+                                });
+                                AlertDialog alertDialog = builder.create();
+                                alertDialog.show();
+
+
+                            }
+
+                            else {
+                                Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
+                            task.getException();
+                        }
+
+
+                    }
+                });
+
+
+
+
+
+
+
+
     }
 
 
@@ -430,6 +465,11 @@ final TextView tv=findViewById(R.id.textView14);
             case R.id.button23:
                 m = db.document("cusines/Highbmi-nonvegetarian");
                 Package="Highbmi-nonvegetarian";
+                break;
+
+            case R.id.button27:
+                m = db.document("cusines/Diabetes (Type 2)");
+                Package="Diabetes (Type 2)";
                 break;
 
 
