@@ -1,6 +1,5 @@
 # PersonalizedFoodDeliverySystem
 
-Android App:
--App folder discontinued 
--Look for Project for the current App files
+Creating an Android App using android studio in Project Folder
 
+Training ML model using tensorflow in ML folder
