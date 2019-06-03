@@ -24,8 +24,6 @@ df["FoodType.Seafood"]=df.iloc[:,8]|df.iloc[:,10]
 df["FoodType.Vegan"]=df.iloc[:,9]|df.iloc[:,11]
 df["FoodType.Vegetarian"]=df.iloc[:,12]
 
-
-
 #Allergie 17 28
 
 df["Allergies.Corn"]=df.iloc[:,13]|df.iloc[:,20]

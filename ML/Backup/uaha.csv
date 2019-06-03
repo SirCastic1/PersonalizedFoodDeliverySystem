@@ -1,0 +1,265 @@
+Timestamp,Food Types ( You can select more than one),Taste.Preferences,Height(cms),Weight(kgs),Allergies(leave blank if none),Any specific Likes?,Diabetes,Locality,Age,BMI,Recommended.Package
+05/10/2018 14:32:04,"Egg, Non Vegetarian, Seafood",Spicy,175,70,None,"Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,NIBM/Kondhwa,36,22.8571428571429,Maharashtrian-Nor
+07/10/2018 15:01:12,Vegetarian,Medium-Spicy,180,60,None,Punjabi,No,Other,24,18.5185185185185,BMI-High
+07/10/2018 15:02:22,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Medium-Spicy,165,52,None,Maharashtrian,No,Other,42,19.1000918273646,Maharashtrian-Nor
+07/10/2018 15:02:51,Vegetarian,Medium-Spicy,175,76,None,Maharashtrian,No,Other,36,24.8163265306122,BMI-Low
+07/10/2018 15:03:32,Vegetarian,Spicy,155,85,None,Punjabi,No,Other,36,35.3798126951093,BMI-Low
+07/10/2018 15:04:42,Vegetarian,Spicy,165,52,None,Chinese,No,Other,45,19.1000918273646,BMI-High
+07/10/2018 15:04:46,Vegetarian,Bland,185,87,Eggs,Maharashtrian,No,Other,48,25.4200146092038,Maharashtrian-Vegetarian
+07/10/2018 15:05:22,Non Vegetarian,Bland,168,48,Peanuts,Chinese,No,Other,50,17.0068027210884,BMI-High
+07/10/2018 15:05:22,Non Vegetarian,Medium-Spicy,180,70,None,Chinese,No,NIBM/Kondhwa,23,21.6049382716049,Chinese-Normal
+07/10/2018 15:06:57,"Vegetarian, Egg, Non Vegetarian",Spicy,163,70,None,Maharashtrian,No,Other,29,26.346494034401,BMI-Low
+07/10/2018 15:07:03,Vegetarian,Bland,150,48,None,Maharashtrian,No,Other,19,21.3333333333333,Maharashtrian-Vegetarian
+07/10/2018 15:07:11,"Vegetarian, Egg",Spicy,165,74,"Milk, Fish","Chinese, Maharashtrian, Lebanese",No,Koregaon Park,61,27.1808999081726,BMI-Low
+07/10/2018 15:07:38,Non Vegetarian,Medium-Spicy,150,48,None,Maharashtrian,No,Other,37,21.3333333333333,Maharashtrian-Nor
+07/10/2018 15:07:46,Egg,Medium-Spicy,178,87,Corn,Chinese,No,NIBM/Kondhwa,59,27.458654210327,BMI-Low
+07/10/2018 15:07:49,Non Vegetarian,Spicy,149,59,Fish,Western,No,Other,39,26.5753794874105,BMI-Low
+07/10/2018 15:07:51,Non Vegetarian,None,150,49,None,None,No,Other,25,21.7777777777778,Lebenese-Nor
+07/10/2018 15:08:31,Vegan,Medium-Spicy,155,60,None,Punjabi,No,Other,49,24.9739854318418,BMI-Low
+07/10/2018 15:08:32,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Medium-Spicy,160.6,65,None,"Thai, Chinese, Maharashtrian, Western",No,Other,59,25.2012611486502,BMI-Low
+07/10/2018 15:08:49,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,184,83,None,Western,No,Other,52,24.515595463138,BMI-Low
+07/10/2018 15:09:07,"Vegetarian, Egg, Non Vegetarian",Spicy,167,45,None,"Chinese, Punjabi",No,NIBM/Kondhwa,33,16.1353938828929,BMI-High
+07/10/2018 15:09:22,Vegetarian,Spicy,156,49.5,None,Maharashtrian,No,Other,42,20.3402366863905,Maharashtrian-Vegetarian
+07/10/2018 15:09:30,Vegetarian,Medium-Spicy,187,80,Peanuts,Maharashtrian,No,Kharadi,49,22.8774057021934,Maharashtrian-Vegetarian
+07/10/2018 15:09:53,Non Vegetarian,Spicy,170,70,"Milk, Gelatin",Maharashtrian,No,NIBM/Kondhwa,38,24.2214532871972,Maharashtrian-Nor
+07/10/2018 15:10:00,Vegetarian,Bland,169,79,Peanuts,Maharashtrian,No,Kharadi,59,27.6600959350163,BMI-Low
+07/10/2018 15:10:00,Vegan,Medium-Spicy,167,65,None,Thai,No,Other,36,23.3066800530675,Thai-Veg
+07/10/2018 15:10:21,Vegetarian,None,169,75,Milk,Thai,No,Hadapsar,17,26.2595847484332,BMI-High
+07/10/2018 15:10:38,"Vegetarian, Egg",Medium-Spicy,186,75,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,34,21.6788067984738,Punjabi-Vegetarian
+07/10/2018 15:10:42,Vegetarian,Medium-Spicy,189,90,Eggs,Thai,Yes,Other,19,25.1952632905014,Diabetes
+07/10/2018 15:10:44,"Vegetarian, Egg",Medium-Spicy,162,64,None,None,No,Other,62,24.3865264441396,Punjabi-Vegetarian
+07/10/2018 15:11:21,"Vegetarian, Egg, Non Vegetarian",Spicy,162,48,None,"Chinese, Maharashtrian, Western",No,Other,57,18.2898948331047,BMI-High
+07/10/2018 15:11:24,Non Vegetarian,Spicy,160,55,Eggs,Western,No,Other,55,21.484375,Western Nor
+07/10/2018 15:11:25,"Egg, Non Vegetarian, Seafood",Medium-Spicy,150,45,None,None,No,Other,51,20,Punjabi-Normal
+07/10/2018 15:12:12,"Vegetarian, Egg, Vegan",Medium-Spicy,182,80,None,"Chinese, Maharashtrian, Punjabi",No,NIBM/Kondhwa,26,24.1516725033209,Punjabi-Vegetarian
+07/10/2018 15:12:36,"Egg, Non Vegetarian, Seafood",Medium-Spicy,155,65,None,None,No,Other,29,27.0551508844953,BMI-High
+07/10/2018 15:13:30,"Vegetarian, Non Vegetarian",Spicy,170,55,Gelatin,"Chinese, Maharashtrian, Punjabi",No,Hadapsar,27,19.0311418685121,BMI-Low
+07/10/2018 15:16:06,Non Vegetarian,Medium-Spicy,165,55,None,"Chinese, Maharashtrian, Punjabi, Western",No,Other,31,20.2020202020202,Punjabi-Normal
+07/10/2018 15:16:20,"Egg, Seafood",Spicy,169,56,None,Punjabi,No,Other,60,19.6071566121634,Punjabi-Vegetarian
+07/10/2018 15:16:25,"Vegetarian, Non Vegetarian, Seafood",Medium-Spicy,175,70,None,None,No,Other,65,22.8571428571429,Punjabi-Normal
+07/10/2018 15:17:05,Vegetarian,Medium-Spicy,151,50,None,"Maharashtrian, Punjabi",No,Other,20,21.9288627691768,Punjabi-Vegetarian
+07/10/2018 15:17:20,"Vegetarian, Egg",Medium-Spicy,178,56,Fish,Maharashtrian,No,Kothrud,61,17.6745360434289,BMI-Low
+07/10/2018 15:17:29,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Spicy,159,50,None,None,No,Other,28,19.7776986669831,BMI-High
+07/10/2018 15:17:30,Vegetarian,Spicy,177,74,None,"Maharashtrian, Punjabi",No,Other,36,23.6202879121581,Maharashtrian-Vegetarian
+07/10/2018 15:17:33,"Vegetarian, Vegan",Spicy,170,65,"Eggs, Peanuts, Fish, Corn","Thai, Chinese, Punjabi",No,Koregaon Park,41,22.4913494809689,Chinese-Vegan
+07/10/2018 15:17:34,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,180.34,92,None,"Chinese, Maharashtrian, Punjabi",No,Other,18,28.2880946638703,BMI-High
+07/10/2018 15:17:59,"Vegetarian, Egg",Medium-Spicy,167,55,None,"Chinese, Maharashtrian",No,Hadapsar,64,19.7210369679802,Maharashtrian-Vegetarian
+07/10/2018 15:18:24,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Medium-Spicy,152,65,None,"Maharashtrian, Western",No,Kharadi,23,28.1336565096953,BMI-High
+07/10/2018 15:19:08,"Vegetarian, Seafood",Medium-Spicy,149,50,Peanuts,Maharashtrian,Yes,Kharadi,57,22.5215080401784,Diabetes
+07/10/2018 15:19:37,"Vegetarian, Non Vegetarian, Seafood",Medium-Spicy,140,53,"Eggs, Fish",Punjabi,No,Koregaon Park,58,27.0408163265306,BMI-Low
+07/10/2018 15:19:49,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Medium-Spicy,165,80,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,23,29.3847566574839,BMI-Low
+07/10/2018 15:19:59,"Vegetarian, Egg",Bland,135,40,"Milk, Eggs","Chinese, Maharashtrian, Punjabi",Yes,NIBM/Kondhwa,46,21.9478737997257,Diabetes
+07/10/2018 15:20:32,"Vegetarian, Non Vegetarian",Medium-Spicy,177,73,None,Chinese,No,Kothrud,64,23.301094832264,Chinese-Normal
+07/10/2018 15:22:35,Vegetarian,Medium-Spicy,160,54,None,"Chinese, Maharashtrian",No,Other,33,21.09375,Chinese-Vegetarian
+07/10/2018 15:23:18,Vegetarian,Bland,172,68,None,None,No,Other,64,22.9853975121687,Lebenese-Vegeterain
+07/10/2018 15:24:37,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,176,60,"Milk, Eggs, Peanuts, Wheat, Fish, Corn","Thai, Maharashtrian",No,Kothrud,61,19.3698347107438,Maharashtrian-Vegetarian
+07/10/2018 15:27:08,Vegetarian,Spicy,170,60,None,"Chinese, Maharashtrian, Punjabi",No,Other,20,20.7612456747405,Maharashtrian-Vegetarian
+07/10/2018 15:27:24,"Egg, Non Vegetarian",Medium-Spicy,160,53,None,"Chinese, Maharashtrian, Punjabi",No,Other,55,20.703125,Punjabi-Normal
+07/10/2018 15:27:32,Vegetarian,Medium-Spicy,165,67,None,"Thai, Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,Other,45,24.6097337006428,Maharashtrian-Vegetarian
+07/10/2018 15:27:34,"Vegetarian, Non Vegetarian, Seafood",Medium-Spicy,150,43.9,None,Maharashtrian,No,Other,31,19.5111111111111,Maharashtrian-Nor
+07/10/2018 15:27:50,Vegetarian,Spicy,160,45,Milk,Chinese,No,Other,53,17.578125,BMI-High
+07/10/2018 15:28:01,"Vegetarian, Egg, Vegan",Medium-Spicy,175,67,"Soy, Fish",Chinese,No,Other,56,21.8775510204082,Chinese-Vegetarian
+07/10/2018 15:28:28,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,176,56,None,"Chinese, Maharashtrian",No,Other,42,18.0785123966942,Maharashtrian-Nor
+07/10/2018 15:29:16,Vegetarian,Spicy,161,58,"Milk, Corn",Chinese,No,Other,36,22.3756799506192,Chinese-Vegetarian
+07/10/2018 15:29:35,"Vegetarian, Egg, Non Vegetarian, Seafood, Vegan",Bland,170.688,50,None,"Thai, Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,Other,20,17.1618469654173,BMI-High
+07/10/2018 15:32:23,Non Vegetarian,Medium-Spicy,172,71,None,Maharashtrian,No,Other,64,23.9994591671174,Maharashtrian-Nor
+07/10/2018 15:33:08,Vegetarian,Medium-Spicy,175,60,None,Chinese,No,Other,54,19.5918367346939,Chinese-Vegetarian
+07/10/2018 15:34:15,Vegetarian,Medium-Spicy,149,54,None,Punjabi,No,Other,39,24.3232286833926,Punjabi-Vegetarian
+07/10/2018 15:34:41,Vegetarian,Medium-Spicy,150,52,None,Punjabi,No,NIBM/Kondhwa,39,23.1111111111111,Punjabi-Vegetarian
+07/10/2018 15:35:10,Vegetarian,None,142,55,Milk,Chinese,No,Other,59,27.2763340607022,BMI-Low
+07/10/2018 15:37:34,Vegetarian,Medium-Spicy,165,67,None,Punjabi,No,Koregaon Park,50,24.6097337006428,Punjabi-Vegetarian
+07/10/2018 15:40:46,Vegetarian,Spicy,150,42,None,"Chinese, Maharashtrian",No,Other,53,18.6666666666667,Maharashtrian-Vegetarian
+07/10/2018 15:42:02,Non Vegetarian,Medium-Spicy,171,63,Fish,Chinese,No,Hinjewadi,61,21.5450907971684,Chinese-Normal
+07/10/2018 15:43:57,Vegetarian,Spicy,159,36,None,Maharashtrian,No,Other,59,14.2399430402278,BMI-High
+07/10/2018 15:44:28,Non Vegetarian,Medium-Spicy,160,47,None,Chinese,No,Other,52,18.359375,Chinese-Normal
+07/10/2018 15:46:03,Vegetarian,Medium-Spicy,170,52,None,None,No,NIBM/Kondhwa,23,17.9930795847751,BMI-High
+07/10/2018 15:47:50,Vegetarian,Medium-Spicy,170,65,Milk,None,No,Other,22,22.4913494809689,Punjabi-Normal
+07/10/2018 15:49:31,Vegetarian,None,180,90,None,"Maharashtrian, Punjabi",No,Other,17,27.7777777777778,BMI-Low
+07/10/2018 15:50:12,Vegetarian,Medium-Spicy,160,64,Peanuts,Maharashtrian,No,Other,27,25,Maharashtrian-Vegetarian
+07/10/2018 15:50:20,Vegetarian,Medium-Spicy,153,60,None,Chinese,No,Other,65,25.6311674996796,BMI-Low
+07/10/2018 15:50:53,Vegetarian,Medium-Spicy,175,90,None,Punjabi,No,Other,22,29.3877551020408,BMI-High
+07/10/2018 15:57:30,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,180,85,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,46,26.2345679012346,BMI-Low
+07/10/2018 15:57:53,Vegetarian,Medium-Spicy,180,58,None,Western,No,Other,24,17.9012345679012,BMI-High
+07/10/2018 16:00:42,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,168,61,None,Punjabi,No,Other,26,21.6128117913832,Punjabi-Normal
+07/10/2018 16:03:09,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,162,42,None,Chinese,No,Other,44,16.0036579789666,BMI-High
+07/10/2018 16:11:02,Non Vegetarian,Spicy,159,45,None,Chinese,No,Kharadi,58,17.7999288002848,BMI-High
+07/10/2018 16:11:51,"Non Vegetarian, Seafood",Spicy,166,76,None,"Thai, Chinese, Maharashtrian, Punjabi, Western",No,Other,29,27.5802003193497,BMI-Low
+07/10/2018 16:17:19,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,174,75,None,"Chinese, Maharashtrian, Punjabi",No,Other,30,24.7720967102656,Punjabi-Normal
+07/10/2018 16:19:32,"Non Vegetarian, Seafood",Medium-Spicy,178,101,None,"Thai, Chinese, Punjabi, Lebanese",No,Other,34,31.8772882211842,BMI-Low
+07/10/2018 16:19:40,Vegetarian,None,170,80,None,None,No,Other,57,27.681660899654,BMI-Low
+07/10/2018 16:21:32,Vegetarian,Medium-Spicy,169,67,None,"Thai, Maharashtrian, Lebanese",No,Other,22,23.458562375267,Maharashtrian-Vegetarian
+07/10/2018 16:23:19,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,168,80,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,37,28.3446712018141,BMI-Low
+07/10/2018 16:26:02,Non Vegetarian,Medium-Spicy,179,65,Eggs,Chinese,No,Koregaon Park,38,20.2865079117381,Chinese-Normal
+07/10/2018 16:28:51,Vegetarian,Spicy,160,43,None,Chinese,No,Other,38,16.796875,BMI-High
+07/10/2018 16:36:08,Vegetarian,Medium-Spicy,155,65,Milk,Maharashtrian,No,Hinjewadi,52,27.0551508844953,BMI-Low
+07/10/2018 16:36:09,"Egg, Non Vegetarian",Spicy,166,67,Fish,Maharashtrian,No,Hadapsar,57,24.3141239657425,Maharashtrian-Nor
+07/10/2018 16:40:56,Vegetarian,Medium-Spicy,182,82,None,"Chinese, Maharashtrian, Punjabi, Western",No,Other,18,24.7554643159039,Punjabi-Vegetarian
+07/10/2018 16:41:11,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,178,56,Fish,Maharashtrian,No,Kothrud,48,17.6745360434289,BMI-High
+07/10/2018 16:42:45,Vegetarian,Medium-Spicy,170,60,None,Maharashtrian,No,Kothrud,60,20.7612456747405,Maharashtrian-Vegetarian
+07/10/2018 16:50:41,"Non Vegetarian, Seafood",Medium-Spicy,180,61,None,Chinese,No,Other,26,18.8271604938272,Chinese-Normal
+07/10/2018 16:55:58,"Vegetarian, Seafood",Medium-Spicy,125,60,None,"Maharashtrian, Punjabi",No,Other,37,38.4,BMI-Low
+07/10/2018 17:01:20,"Vegetarian, Vegan",Medium-Spicy,165,57,None,"Thai, Maharashtrian, Lebanese, Western",No,Other,59,20.9366391184573,Thai-Veg
+07/10/2018 17:06:22,Vegetarian,Medium-Spicy,156,44,None,"Chinese, Western",No,Other,55,18.0802103879027,Chinese-Vegetarian
+07/10/2018 17:09:58,Non Vegetarian,Medium-Spicy,165,80,None,"Thai, Chinese, Punjabi",No,Other,42,29.3847566574839,BMI-Low
+07/10/2018 17:10:31,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,178,58,None,"Punjabi, Western",No,Kothrud,65,18.3057694735513,Punjabi-Normal
+07/10/2018 17:12:38,Vegetarian,Medium-Spicy,165,50,None,"Maharashtrian, Punjabi",No,Other,51,18.3654729109275,Maharashtrian-Vegetarian
+07/10/2018 17:13:55,Non Vegetarian,Medium-Spicy,170,65,None,"Thai, Punjabi, Lebanese",No,Koregaon Park,57,22.4913494809689,Punjabi-Normal
+07/10/2018 17:14:16,Vegetarian,Medium-Spicy,170,53,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,65,18.3391003460208,Maharashtrian-Vegetarian
+07/10/2018 17:15:18,Non Vegetarian,Medium-Spicy,168,66,None,Chinese,No,Other,23,23.3843537414966,Chinese-Normal
+07/10/2018 17:20:14,"Vegetarian, Non Vegetarian, Seafood",Medium-Spicy,154,58,None,"Chinese, Lebanese",No,NIBM/Kondhwa,45,24.4560634171024,Chinese-Normal
+07/10/2018 17:20:57,"Vegetarian, Non Vegetarian",Medium-Spicy,177,70,None,"Chinese, Maharashtrian, Punjabi",No,Hadapsar,33,22.3435155925819,Punjabi-Normal
+07/10/2018 17:22:52,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,162,67,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,17,25.5296448712087,Maharashtrian-Nor
+07/10/2018 17:22:58,Vegetarian,Medium-Spicy,160,43,None,"Chinese, Punjabi",No,NIBM/Kondhwa,31,16.796875,BMI-High
+07/10/2018 17:26:19,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,157.48,61,None,"Chinese, Maharashtrian, Punjabi, Lebanese",No,Other,44,24.5968233871952,Maharashtrian-Nor
+07/10/2018 17:30:33,Vegetarian,Medium-Spicy,157,52,None,"Maharashtrian, Punjabi",No,Other,42,21.0961905148282,Maharashtrian-Vegetarian
+07/10/2018 17:33:22,Vegetarian,Medium-Spicy,159,60,Wheat,"Lebanese, Western",No,Other,38,23.7332384003797,Western-Veg
+07/10/2018 17:40:43,Vegetarian,None,166,61,None,Thai,No,Other,33,22.1367397300044,Thai-Veg
+07/10/2018 17:45:39,Vegetarian,Spicy,167,65,"Milk, Peanuts, Wheat, Corn","Maharashtrian, Punjabi",No,Other,30,23.3066800530675,Maharashtrian-Vegetarian
+07/10/2018 17:45:47,"Vegetarian, Non Vegetarian",Medium-Spicy,150,52,Gelatin,"Chinese, Maharashtrian",No,Other,51,23.1111111111111,Maharashtrian-Nor
+07/10/2018 17:48:35,Vegetarian,None,155,73,None,Chinese,No,Koregaon Park,39,30.3850156087409,BMI-Low
+07/10/2018 17:48:47,"Non Vegetarian, Seafood",Spicy,167,49,None,None,No,Other,32,17.5696511169278,BMI-High
+07/10/2018 17:49:10,Vegetarian,Medium-Spicy,170,55,Fish,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,32,19.0311418685121,Punjabi-Vegetarian
+07/10/2018 18:01:04,Vegetarian,Medium-Spicy,151,50,None,"Chinese, Punjabi",No,Other,25,21.9288627691768,Punjabi-Vegetarian
+07/10/2018 18:06:13,"Vegetarian, Non Vegetarian",Medium-Spicy,164,55,None,Punjabi,No,Other,42,20.4491374182034,Punjabi-Normal
+07/10/2018 18:08:17,"Vegetarian, Non Vegetarian",Spicy,164,74,None,Maharashtrian,No,Other,21,27.5133848899465,BMI-Low
+07/10/2018 18:20:38,"Vegetarian, Egg, Non Vegetarian, Seafood",Spicy,171,59,None,"Chinese, Maharashtrian, Punjabi",No,NIBM/Kondhwa,58,20.1771485243323,Maharashtrian-Nor
+07/10/2018 18:33:04,Vegetarian,Medium-Spicy,160,50,"Corn, Gelatin","Maharashtrian, Punjabi",No,Other,17,19.53125,Punjabi-Vegetarian
+07/10/2018 18:35:05,Vegan,Medium-Spicy,178,66,None,"Thai, Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,Other,43,20.8307031940412,Chinese-Vegan
+07/10/2018 18:41:25,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,183,78,None,"Maharashtrian, Punjabi, Lebanese, Western",No,Other,21,23.291229956105,Maharashtrian-Nor
+07/10/2018 18:42:10,"Egg, Non Vegetarian, Seafood",Medium-Spicy,181,65,None,"Punjabi, Lebanese",No,NIBM/Kondhwa,54,19.8406642043894,Punjabi-Normal
+07/10/2018 18:49:45,Non Vegetarian,Medium-Spicy,170,60,None,"Thai, Maharashtrian, Punjabi, Lebanese, Western",No,,40,20.7612456747405,Thai-Nor
+07/10/2018 18:54:26,Vegetarian,Spicy,140,56,Milk,Chinese,No,Kharadi,31,28.5714285714286,BMI-Low
+07/10/2018 19:02:24,Vegetarian,Spicy,155,40,None,"Chinese, Maharashtrian",No,Other,39,16.6493236212279,BMI-High
+07/10/2018 19:04:23,Vegetarian,Spicy,195,65,Milk,Chinese,No,Other,64,17.0940170940171,BMI-High
+07/10/2018 19:05:41,Vegetarian,Spicy,195,65,Milk,Chinese,No,Other,49,17.0940170940171,BMI-High
+07/10/2018 19:05:44,Vegetarian,None,149,49,Milk,Maharashtrian,No,Hinjewadi,45,22.0710778793748,Maharashtrian-Vegetarian
+07/10/2018 19:10:10,"Egg, Non Vegetarian, Seafood",Medium-Spicy,175,70,Gelatin,"Chinese, Maharashtrian, Punjabi, Western",No,Koregaon Park,41,22.8571428571429,Chinese-Normal
+07/10/2018 19:11:42,Vegetarian,Spicy,160,55,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,42,21.484375,Maharashtrian-Vegetarian
+07/10/2018 19:15:06,Vegetarian,Medium-Spicy,170,78,None,"Chinese, Punjabi",No,Other,55,26.9896193771626,BMI-Low
+07/10/2018 19:15:33,Vegetarian,Medium-Spicy,170,42,None,Maharashtrian,No,Other,51,14.5328719723183,BMI-High
+07/10/2018 19:19:39,Vegetarian,Spicy,150,59,None,None,No,Other,59,26.2222222222222,Maharashtrian-Vegetarian
+07/10/2018 19:21:29,Vegetarian,Medium-Spicy,155,56,Milk,"Chinese, Punjabi",Yes,Other,24,23.309053069719,Punjabi-Vegetarian
+07/10/2018 19:41:36,Vegetarian,None,149,57,None,None,No,Other,48,25.6745191658033,BMI-Low
+07/10/2018 20:00:01,"Vegetarian, Non Vegetarian",Medium-Spicy,175,70,None,"Chinese, Maharashtrian, Punjabi",No,NIBM/Kondhwa,47,23,Punjabi-Normal
+07/10/2018 21:13:56,Vegetarian,Spicy,183,108,None,"Thai, Chinese, Punjabi, Lebanese",No,Other,32,32.2493953238377,BMI-Low
+07/10/2018 23:14:47,"Vegetarian, Non Vegetarian",Medium-Spicy,162,51,None,None,No,Other,34,19.4330132601738,Punjabi-Normal
+07/10/2018 23:19:31,"Vegetarian, Non Vegetarian, Seafood",Spicy,165,54,None,Maharashtrian,No,Other,52,19.8347107438017,Maharashtrian-Nor
+07/10/2018 23:36:10,Vegetarian,Spicy,165,68,None,Maharashtrian,No,Other,65,24.9770431588613,Maharashtrian-Vegetarian
+07/10/2018 23:54:49,"Vegetarian, Egg, Non Vegetarian, Seafood",Spicy,169,78,None,"Chinese, Maharashtrian, Punjabi",No,Other,49,27.3099681383705,BMI-Low
+08/10/2018 09:48:28,Vegetarian,Spicy,149,51,None,"Thai, Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,Other,26,22.9719382009819,Thai-Veg
+08/10/2018 11:01:29,Vegetarian,Medium-Spicy,172,58,None,"Maharashtrian, Punjabi",No,Other,30,19.6051919956733,Punjabi-Vegetarian
+08/10/2018 12:32:57,Vegetarian,Medium-Spicy,165,50,None,"Maharashtrian, Punjabi",No,Other,58,18.3654729109275,Punjabi-Vegetarian
+08/10/2018 15:06:26,"Vegetarian, Egg, Non Vegetarian, Seafood",Medium-Spicy,185,82,None,"Thai, Maharashtrian, Lebanese",No,Other,17,23.9590942293645,Thai-Nor
+08/10/2018 15:18:48,Vegetarian,Medium-Spicy,160,65,Peanuts,Punjabi,No,Other,40,25.390625,Punjabi-Vegetarian
+08/10/2018 15:20:34,Vegan,Medium-Spicy,162,63,Milk,Maharashtrian,No,Other,51,24.0054869684499,Maharashtrian-Vegetarian
+08/10/2018 15:22:22,"Vegetarian, Vegan",Spicy,167,68,Corn,"Chinese, Maharashtrian, Punjabi",No,Other,21,24.3823729785937,Maharashtrian-Vegetarian
+08/10/2018 17:25:35,Vegetarian,Medium-Spicy,150,45,None,Maharashtrian,No,Other,45,20,Maharashtrian-Vegetarian
+08/10/2018 17:30:03,"Vegetarian, Egg, Non Vegetarian, Seafood",Spicy,149,68,"Milk, Eggs, Fish","Chinese, Maharashtrian, Punjabi",No,Hadapsar,41,30.6292509346426,BMI-Low
+08/10/2018 19:51:45,Vegetarian,Medium-Spicy,150,50,Fish,Punjabi,No,Hinjewadi,57,22.2222222222222,Punjabi-Vegetarian
+08/10/2018 19:55:36,Vegetarian,Medium-Spicy,171,70,None,"Chinese, Maharashtrian, Punjabi",No,Other,23,23.9389897746315,Chinese-Vegetarian
+08/10/2018 22:21:39,"Vegetarian, Egg, Non Vegetarian",Medium-Spicy,169,71,None,"Thai, Chinese, Punjabi",No,NIBM/Kondhwa,41,24.8590735618501,Thai-Nor
+09/10/2018 13:14:49,Non Vegetarian,Medium-Spicy,184,65,None,"Punjabi, Lebanese, Western",No,NIBM/Kondhwa,22,19.1989603024575,Punjabi-Normal
+13/10/2018 23:53:57,Vegetarian,Medium-Spicy,143,62,"Eggs, Fish, Gelatin","Thai, Maharashtrian, Lebanese",No,Kothrud,21,30.3193310186317,BMI-Low
+13/10/2018 23:56:29,"Vegetarian, Egg, Non Vegetarian",Bland,180,90,None,"Punjabi, Lebanese",No,Kothrud,47,27.7777777777778,BMI-Low
+14/10/2018 00:51:12,Vegetarian,Spicy,168,70,None,"Chinese, Maharashtrian, Punjabi",No,NIBM/Kondhwa,34,24.8015873015873,Maharashtrian-Vegetarian
+14/10/2018 11:01:37,Vegetarian,Medium-Spicy,153,69.722,"Eggs, Fish, Gelatin","Thai, Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,NIBM/Kondhwa,21,29.7842710068777,BMI-Low
+14/10/2018 13:50:19,Vegetarian,Spicy,140,66,Milk,Chinese,No,Other,33,33.6734693877551,BMI-Low
+26/01/2019 10:17:49,Vegetarian,Medium-Spicy,168,55,Milk,"Chinese, Maharashtrian",No,NIBM/Kondhwa,37,19.4869614512472,Chinese-Vegetarian
+26/01/2019 10:18:42,"Vegetarian, Egg",Spicy,175,65,Gelatin,"Chinese, Maharashtrian, Punjabi",No,Kharadi,35,21.2244897959184,Maharashtrian-Vegetarian
+26/01/2019 10:19:26,Non Vegetarian,Bland,167,87,None,Maharashtrian,No,Other,49,31.1950948402596,BMI-Low
+26/01/2019 10:20:13,"Non Vegetarian, Seafood",Spicy,187,90,Fish,"Chinese, Punjabi",No,Other,44,25.7370814149675,Chinese-Normal
+26/01/2019 10:20:49,Vegetarian,Medium-Spicy,177,62,Gelatin,Western,No,NIBM/Kondhwa,43,19.7899709534297,Western-Veg
+26/01/2019 10:21:36,"Vegetarian, Vegan",Medium-Spicy,150,45,Soy,Western,No,Kharadi,40,20,Western-Veg
+26/01/2019 10:22:47,Vegan,Spicy,177,69,Peanuts,Maharashtrian,No,Koregaon Park,42,22.0243225126879,Maharashtrian-Vegetarian
+26/01/2019 10:23:22,Vegetarian,Medium-Spicy,168,67,Milk,Punjabi,Yes,Koregaon Park,54,23.7386621315193,Punjabi-Vegan
+26/01/2019 10:24:01,Non Vegetarian,Medium-Spicy,168,88,Wheat,Maharashtrian,No,NIBM/Kondhwa,26,31.1791383219955,BMI-Low
+26/01/2019 10:24:36,Vegetarian,Medium-Spicy,160,69,None,"Maharashtrian, Lebanese, Western",No,Kothrud,52,26.953125,BMI-Low
+26/01/2019 10:25:20,Vegetarian,Bland,150,59,None,Punjabi,No,Hadapsar,39,26.2222222222222,BMI-Low
+26/01/2019 10:26:21,Vegetarian,Medium-Spicy,161,71,Soy,"Thai, Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,Other,38,27.3909185602407,BMI-Low
+26/01/2019 10:27:02,Non Vegetarian,Bland,185,95,Gelatin,"Maharashtrian, Punjabi",No,Hinjewadi,31,27.7574872169467,BMI-Low
+26/01/2019 10:27:37,Non Vegetarian,Medium-Spicy,165,73,Milk,None,No,Kharadi,40,26.8135904499541,BMI-Low
+26/01/2019 10:28:24,Vegetarian,Bland,188,72,None,"Chinese, Punjabi",No,Koregaon Park,36,20.3712086917157,Punjabi-Vegetarian
+26/01/2019 10:28:51,Vegan,Bland,160,75,Milk,None,No,Koregaon Park,30,29.296875,BMI-Low
+26/01/2019 10:29:23,Vegetarian,Medium-Spicy,160,55,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,40,21.484375,Maharashtrian-Vegetarian
+26/01/2019 10:30:03,Non Vegetarian,Medium-Spicy,166,66,None,"Chinese, Punjabi",No,Kothrud,23,23.9512265931195,Chinese-Normal
+26/01/2019 10:30:35,Vegetarian,Bland,160,60,"Milk, Fish",Chinese,No,Kothrud,33,23.4375,Chinese-Vegan
+26/01/2019 10:31:10,Seafood,Spicy,177,71,Milk,"Maharashtrian, Punjabi",No,Hadapsar,43,22.662708672476,Maharashtrian-Nor
+26/01/2019 10:31:42,Vegan,Medium-Spicy,170,69,None,Lebanese,No,Other,58,23.8754325259516,Punjabi-Vegan
+26/01/2019 10:33:10,Vegetarian,Bland,160,45,Fish,"Maharashtrian, Lebanese, Western",No,Hinjewadi,49,17.578125,BMI-High
+26/01/2019 10:33:40,Non Vegetarian,Bland,178,56,Eggs,"Thai, Western",No,Hinjewadi,47,17.6745360434289,BMI-High
+26/01/2019 10:34:17,Seafood,Medium-Spicy,156,65,Milk,Maharashtrian,No,Kharadi,30,26.7094017094017,BMI-Low
+26/01/2019 10:34:50,Vegetarian,Spicy,167,68,None,Maharashtrian,No,Koregaon Park,41,24.3823729785937,Maharashtrian-Vegetarian
+26/01/2019 10:35:32,Seafood,Medium-Spicy,165,61,None,"Chinese, Maharashtrian, Punjabi",No,NIBM/Kondhwa,61,22.4058769513315,Chinese-Vegetarian
+26/01/2019 10:36:05,Vegetarian,Spicy,171,61,None,Maharashtrian,No,NIBM/Kondhwa,30,20.8611196607503,Maharashtrian-Vegetarian
+26/01/2019 10:36:39,Non Vegetarian,Medium-Spicy,160,55,Soy,Chinese,No,NIBM/Kondhwa,54,21.484375,Chinese-Normal
+26/01/2019 10:37:13,Vegetarian,Medium-Spicy,166,66,None,"Chinese, Maharashtrian, Punjabi",No,Kothrud,45,23.9512265931195,Punjabi-Vegetarian
+26/01/2019 10:37:52,Non Vegetarian,Medium-Spicy,167,67,None,Chinese,No,NIBM/Kondhwa,24,24.023808670085,Chinese-Normal
+26/01/2019 10:38:22,"Non Vegetarian, Seafood",Medium-Spicy,170,70,Milk,"Maharashtrian, Punjabi",No,Hadapsar,23,24.2214532871972,Punjabi-Normal
+26/01/2019 10:38:29,"Vegetarian, Egg",Spicy,156,40,None,"Chinese, Maharashtrian, Punjabi",No,NIBM/Kondhwa,20,16.4365548980934,BMI-High
+26/01/2019 10:38:50,Vegetarian,Medium-Spicy,190,90,None,"Chinese, Punjabi",No,Kothrud,32,24.9307479224377,Chinese-Vegetarian
+26/01/2019 10:39:28,Non Vegetarian,Bland,156,71,Fish,"Punjabi, Lebanese, Western",Yes,Hadapsar,31,29.1748849441157,BMI-Low
+26/01/2019 10:39:55,Non Vegetarian,Medium-Spicy,173,63,None,"Chinese, Maharashtrian, Punjabi",No,Other,43,21.0498179023689,Chinese-Normal
+26/01/2019 10:40:19,Vegetarian,Spicy,154,45,None,"Chinese, Lebanese",No,Hinjewadi,22,18.9745319615449,Chinese-Vegetarian
+26/01/2019 10:40:49,Non Vegetarian,Spicy,154,45,"Milk, Peanuts, Soy",Maharashtrian,No,Kharadi,42,18.9745319615449,Maharashtrian-Nor
+26/01/2019 10:41:37,Vegetarian,Medium-Spicy,180,80,None,Punjabi,No,Other,60,24.6913580246914,Punjabi-Vegetarian
+26/01/2019 10:42:19,Non Vegetarian,Bland,190,75,None,Lebanese,Yes,Koregaon Park,47,20.7756232686981,Lebenese-Nor
+26/01/2019 10:42:56,Non Vegetarian,Spicy,180,55,None,"Maharashtrian, Western",No,Koregaon Park,26,16.9753086419753,BMI-High
+26/01/2019 10:47:36,Non Vegetarian,Spicy,167,66,None,"Chinese, Maharashtrian",No,Koregaon Park,26,23.6652443615762,Maharashtrian-Nor
+26/01/2019 10:48:02,Non Vegetarian,Medium-Spicy,170,70,None,Western,No,NIBM/Kondhwa,61,24.2214532871972,Western Nor
+26/01/2019 10:48:30,Non Vegetarian,Medium-Spicy,168,68,None,Maharashtrian,No,Kothrud,34,24.092970521542,Maharashtrian-Nor
+26/01/2019 10:48:56,Non Vegetarian,Medium-Spicy,185,85,None,Maharashtrian,No,Kothrud,64,24.8356464572681,Maharashtrian-Nor
+26/01/2019 10:49:26,Non Vegetarian,Bland,166,66,None,Lebanese,No,Hadapsar,53,23.9512265931195,Lebenese-Nor
+26/01/2019 10:50:20,Non Vegetarian,Medium-Spicy,159,88,None,Maharashtrian,No,Other,46,34.8087496538903,BMI-Low
+26/01/2019 10:50:45,Non Vegetarian,Medium-Spicy,176,76,None,Maharashtrian,No,Hinjewadi,48,24.5351239669421,Maharashtrian-Nor
+26/01/2019 10:51:03,"Vegetarian, Egg, Vegan",Medium-Spicy,178.308,65,None,"Maharashtrian, Punjabi",No,Other,23,20.444274295745,Punjabi-Vegetarian
+26/01/2019 10:51:14,Non Vegetarian,Medium-Spicy,172,72,None,"Chinese, Maharashtrian, Punjabi",No,Hinjewadi,44,24.3374797187669,Chinese-Normal
+26/01/2019 10:51:40,Non Vegetarian,Medium-Spicy,164,64,None,"Chinese, Maharashtrian",No,Kharadi,31,23.7953599048186,Punjabi-Normal
+26/01/2019 10:52:06,Non Vegetarian,Medium-Spicy,163,63,None,"Maharashtrian, Punjabi",No,Koregaon Park,65,23.7118446309609,Punjabi-Normal
+26/01/2019 10:52:45,Vegetarian,Spicy,140,50,None,Maharashtrian,No,NIBM/Kondhwa,42,25.5102040816327,Maharashtrian-Vegetarian
+26/01/2019 10:53:22,Non Vegetarian,Bland,167,67,None,Lebanese,No,Kothrud,33,24.023808670085,Lebenese-Nor
+26/01/2019 10:53:55,Non Vegetarian,Medium-Spicy,168,78,Gelatin,"Chinese, Maharashtrian, Punjabi",No,Kothrud,33,27.6360544217687,BMI-Low
+26/01/2019 10:54:36,"Vegetarian, Egg, Non Vegetarian, Seafood",Spicy,177.8,77,None,"Thai, Chinese, Maharashtrian, Lebanese, Western",No,Other,57,24.357191571526,Maharashtrian-Nor
+26/01/2019 10:55:41,Non Vegetarian,Medium-Spicy,160,60,Corn,"Chinese, Maharashtrian",No,Hadapsar,24,23.4375,Chinese-Normal
+26/01/2019 10:57:01,Non Vegetarian,Medium-Spicy,158,88,Corn,"Lebanese, Western",Yes,Hinjewadi,60,35.2507610959782,BMI-Low
+26/01/2019 10:58:27,Non Vegetarian,Medium-Spicy,181,81,None,Maharashtrian,No,Kharadi,28,24.7245200085467,Maharashtrian-Nor
+26/01/2019 10:58:52,Non Vegetarian,Medium-Spicy,177,77,None,"Thai, Western",No,Kharadi,61,24.5778671518401,Thai-Nor
+26/01/2019 10:59:50,Non Vegetarian,Spicy,183,83,None,"Thai, Chinese, Western",No,NIBM/Kondhwa,18,24.7842575173938,Chinese-Normal
+26/01/2019 10:59:25,Non Vegetarian,Medium-Spicy,182,82,Wheat,"Thai, Chinese, Maharashtrian",No,NIBM/Kondhwa,27,24.7554643159039,Thai-Nor
+26/01/2019 11:12:23,Non Vegetarian,Medium-Spicy,187,87,None,Maharashtrian,Yes,NIBM/Kondhwa,46,24.8791787011353,Maharashtrian-Nor
+26/01/2019 11:12:48,Non Vegetarian,Medium-Spicy,177,77,None,Maharashtrian,No,Kharadi,59,24.5778671518401,Maharashtrian-Nor
+26/01/2019 11:14:34,Non Vegetarian,Medium-Spicy,167,67,None,"Chinese, Maharashtrian",No,Koregaon Park,61,24.023808670085,Chinese-Normal
+26/01/2019 11:15:10,Non Vegetarian,Medium-Spicy,168,68,None,"Chinese, Maharashtrian",No,NIBM/Kondhwa,60,24.092970521542,Chinese-Normal
+26/01/2019 11:18:26,Non Vegetarian,Medium-Spicy,168,69,None,"Maharashtrian, Punjabi",No,Kothrud,38,24.4472789115646,Punjabi-Normal
+26/01/2019 11:18:50,Non Vegetarian,Medium-Spicy,170,55,None,"Maharashtrian, Punjabi, Western",No,Kothrud,23,19.0311418685121,Western Nor
+26/01/2019 11:19:13,Non Vegetarian,Medium-Spicy,171,71,None,Maharashtrian,Yes,NIBM/Kondhwa,54,24.2809753428405,Maharashtrian-Nor
+26/01/2019 11:19:44,"Egg, Non Vegetarian",Medium-Spicy,166,87,None,"Maharashtrian, Punjabi",No,Kothrud,62,31.5720714182029,BMI-Low
+26/01/2019 11:20:08,"Non Vegetarian, Seafood",Bland,171,87,None,None,No,Hadapsar,42,29.7527444341849,BMI-Low
+26/01/2019 11:20:38,"Egg, Non Vegetarian",Medium-Spicy,169,76,Wheat,Western,No,Other,35,26.609712545079,Western Nor
+26/01/2019 11:21:53,Egg,Medium-Spicy,166,56,Peanuts,"Maharashtrian, Lebanese, Western",No,Hinjewadi,42,20.3222528668892,Maharashtrian-Vegetarian
+26/01/2019 11:22:19,Non Vegetarian,Medium-Spicy,189,76,None,None,No,Kharadi,55,21.2760001119789,Western Nor
+26/01/2019 11:22:51,"Non Vegetarian, Seafood",Medium-Spicy,187,77,None,Punjabi,No,Koregaon Park,33,22.0195029883611,Punjabi-Normal
+26/01/2019 11:23:18,"Non Vegetarian, Seafood",Medium-Spicy,180,80,None,Maharashtrian,No,NIBM/Kondhwa,47,24.6913580246914,Maharashtrian-Nor
+26/01/2019 11:23:45,Non Vegetarian,Medium-Spicy,163,63,None,Chinese,No,Koregaon Park,21,23.7118446309609,Chinese-Normal
+26/01/2019 11:24:12,Vegetarian,Spicy,144,44,Wheat,Lebanese,No,Kothrud,43,21.2191358024691,Lebenese-Vegeterain
+26/01/2019 11:24:37,Non Vegetarian,Medium-Spicy,164,49,None,Chinese,No,Hadapsar,62,18.2183224271267,Chinese-Normal
+26/01/2019 11:26:13,"Egg, Non Vegetarian, Seafood",Spicy,180,75,None,Punjabi,No,Koregaon Park,59,23.1481481481481,Punjabi-Normal
+26/01/2019 11:26:40,Egg,Medium-Spicy,170,50,None,"Thai, Chinese, Lebanese",No,Kharadi,49,17.3010380622837,BMI-High
+26/01/2019 11:27:35,Non Vegetarian,Medium-Spicy,160,70,None,"Punjabi, Lebanese",No,Kothrud,17,27.34375,BMI-Low
+26/01/2019 11:27:58,"Egg, Non Vegetarian",Medium-Spicy,168,81,None,Maharashtrian,No,Other,54,28.6989795918367,BMI-Low
+26/01/2019 11:28:35,Vegetarian,Spicy,180,70,None,"Maharashtrian, Lebanese",No,Koregaon Park,18,21.6049382716049,Maharashtrian-Vegetarian
+26/01/2019 11:28:55,Non Vegetarian,Medium-Spicy,171,71,None,"Maharashtrian, Lebanese",No,Kothrud,38,24.2809753428405,Maharashtrian-Nor
+26/01/2019 11:29:18,Non Vegetarian,Medium-Spicy,181,71,"Milk, Wheat",Maharashtrian,No,Hadapsar,33,21.6721101309484,Maharashtrian-Nor
+26/01/2019 11:29:41,Non Vegetarian,Medium-Spicy,170,83,Gelatin,Lebanese,No,Koregaon Park,46,28.719723183391,BMI-Low
+26/01/2019 11:30:01,Non Vegetarian,Medium-Spicy,166,61,Fish,"Maharashtrian, Punjabi, Lebanese",No,NIBM/Kondhwa,44,22.1367397300044,Punjabi-Normal
+26/01/2019 11:30:23,"Non Vegetarian, Seafood",Bland,161,61,Wheat,"Maharashtrian, Punjabi, Lebanese, Western",No,Kothrud,58,23.5330427066857,Lebenese-Nor
+26/01/2019 11:30:44,Non Vegetarian,Medium-Spicy,171,71,None,Maharashtrian,No,Hadapsar,22,24.2809753428405,Maharashtrian-Nor
+26/01/2019 11:31:15,"Vegetarian, Egg",Medium-Spicy,151,51,Wheat,Punjabi,No,Kharadi,50,22.3674400245603,Punjabi-Vegetarian
+26/01/2019 11:31:47,"Vegetarian, Egg",Spicy,191,141,Milk,"Thai, Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,Other,23,38.6502562977989,BMI-Low
+26/01/2019 11:32:09,Vegetarian,Spicy,154,54,None,Maharashtrian,No,Kothrud,45,22.7694383538539,Maharashtrian-Vegetarian
+26/01/2019 11:32:43,Non Vegetarian,Medium-Spicy,171,71,None,"Chinese, Maharashtrian, Punjabi",No,Hinjewadi,32,24.2809753428405,Chinese-Normal
+26/01/2019 11:33:00,Non Vegetarian,Medium-Spicy,181,71,None,Maharashtrian,No,Kothrud,39,21.6721101309484,Maharashtrian-Nor
+26/01/2019 11:33:25,Non Vegetarian,Medium-Spicy,165,74,None,Chinese,No,Hadapsar,39,27.1808999081726,BMI-Low
+26/01/2019 11:33:44,Non Vegetarian,Medium-Spicy,187,81,None,"Maharashtrian, Punjabi",No,NIBM/Kondhwa,53,23.1633732734708,Punjabi-Normal
+26/01/2019 11:34:04,Non Vegetarian,Spicy,188,81,Eggs,None,No,Kothrud,65,22.9176097781802,Maharashtrian-Nor
+26/01/2019 11:34:38,"Egg, Non Vegetarian, Seafood",Spicy,192,71,None,"Chinese, Maharashtrian, Punjabi, Lebanese, Western",No,Kothrud,41,19.2599826388889,Maharashtrian-Nor
+26/01/2019 14:34:34,Vegetarian,Medium-Spicy,169,88,None,"Chinese, Maharashtrian, Punjabi",No,Other,23,30.8112461048283,BMI-Low

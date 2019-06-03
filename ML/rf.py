@@ -10,10 +10,10 @@ dfeval = pd.read_csv("x.csv")
 y_train = dftrain.pop('Recommended.Package') #put as target and pop from dataset
 y_eval  = dfeval.pop('Recommended.Package')
 
-
+#'Taste.Preferences','Diabetes'
 
 fc = tf.feature_column
-CATEGORICAL_COLUMNS = [ 'Taste.Preferences','Diabetes','FoodType.Egg',	'FoodType.NonVegetarian',	'FoodType.Seafood'	,'FoodType.Vegan',	'FoodType.Vegetarian',	'Allergies.Corn',	'Allergies.Eggs',	'Allergies.Fish',	'Allergies.Gelatin',	'Allergies.Peanuts',	'Allergies.Soy',	'Allergies.Wheat',	'Allergies.Milk',	'Allergies.None',	'Likes.Chinese',	'Likes.Lebanese',	'Likes.Maharashtrian',	'Likes.Punjabi',	'Likes.Western','Likes.None',	'Likes.Thai']
+CATEGORICAL_COLUMNS = [ 'FoodType.Egg',	'FoodType.NonVegetarian',	'FoodType.Seafood'	,'FoodType.Vegan',	'FoodType.Vegetarian',	'Allergies.Corn',	'Allergies.Eggs',	'Allergies.Fish',	'Allergies.Gelatin',	'Allergies.Peanuts',	'Allergies.Soy',	'Allergies.Wheat',	'Allergies.Milk',	'Allergies.None',	'Likes.Chinese',	'Likes.Lebanese',	'Likes.Maharashtrian',	'Likes.Punjabi',	'Likes.Western','Likes.None',	'Likes.Thai']
 NUMERIC_COLUMNS = ['BMI']
 
 def one_hot_cat_column(feature_name, vocab):
@@ -25,8 +25,9 @@ feature_columns = []
 for feature_name in CATEGORICAL_COLUMNS:
   # Need to one-hot encode categorical features.
   vocabulary = dftrain[feature_name].unique()
-  feature_columns.append(one_hot_cat_column(feature_name, vocabulary))
-
+  #feature_columns.append(one_hot_cat_column(feature_name, vocabulary))
+  feature_columns.append(tf.feature_column.numeric_column(feature_name,
+                                                          dtype=tf.int64))
 
 
 
@@ -75,10 +76,13 @@ y_pred  = dfpred.pop('Recommended.Package')
 preds=est.predict(make_input_fn(dfpred,y_pred))
 #print(preds)
 
+
+#'Taste.Preferences' : tf.placeholder(tf.int64, [None]),
+     # 'Diabetes' : tf.placeholder(tf.int64, [None]),
+
 def serving_input_fn():
     feature_placeholders = {
-      'Taste.Preferences' : tf.placeholder(tf.int64, [None]),
-      'Diabetes' : tf.placeholder(tf.int64, [None]),
+
       'BMI': tf.placeholder(tf.float32, [None]),
       'FoodType.Egg': tf.placeholder(tf.int64, [None]),
       'FoodType.NonVegetarian' : tf.placeholder(tf.int64, [None]),

@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+// FRAGMENT SELECTING
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
+//Open update preferences page
     public void Register(View view) {
 
         Intent intent = new Intent(this, form.class);
@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+//Used this in loadrecommend nd load meal
     public void showMessage(final String title, final StringBuffer Message) //select package and update on DB if yes while selecting amount from db
     {
         DocumentReference Rec;
@@ -265,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+//Get recommended package from DB
 public void loadRecommend(View v) {
 
         DocumentReference Rec;
@@ -297,10 +297,8 @@ final TextView tv=findViewById(R.id.textView14);
             });
 
 }
-//connect current email with document here. find recommended package and return text
-    //compare with cusines collection for info
 
-    public void selectRecommend(View v)  //view recommended package details
+    public void selectRecommend(View v)  //view recommended package details  and buy if required
     {
 
         final String Package=rec;
@@ -353,7 +351,7 @@ final TextView tv=findViewById(R.id.textView14);
 
     }
 
-
+//Load selected meal
     public void loadMeals(View v) {
 
         DocumentReference m;
@@ -531,7 +529,7 @@ final TextView tv=findViewById(R.id.textView14);
 
     }
 
-
+//Update home page
     public void menuDay(View v) {
 
          //update from db
@@ -553,9 +551,9 @@ final TextView tv=findViewById(R.id.textView14);
 
 
 
-                                    DocumentReference m = db.document("cusines/" + selected.toString());
+                                    DocumentReference m = db.document("cusines/" +selected.toString());
 
-
+                                    textTitle.setText(selected.toString());
                                     //today
                                     Date now = new Date();
                                     SimpleDateFormat simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
@@ -703,7 +701,7 @@ final TextView tv=findViewById(R.id.textView14);
     private CollectionReference Ref = db.collection("Customers");
     private DocumentReference Doc=Ref.document(currentEmail());
 
-
+//exit app
     public void onBackPressed(){
         final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MainActivity.this);
         builder.setMessage("Do you really want to Exit ?");
@@ -734,7 +732,7 @@ final TextView tv=findViewById(R.id.textView14);
         }
 
 
-
+//Show BMI on Account page
     public void loadNotes(View v) {
 
 
@@ -759,7 +757,7 @@ final TextView tv=findViewById(R.id.textView14);
 
 
                                 bmi.setText("\t\t\t\tHeight:" + Height + "\n\n\t\t\t\tWeight:" + Weight + "\n\n\n\t\t\t\tYour Bmi is : " + BMI);
-                                bmi.setTextSize(26);
+                                bmi.setTe xtSize(26);
                             } else {
                                 Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
                             }

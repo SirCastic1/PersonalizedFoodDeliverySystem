@@ -82,4 +82,3 @@ Taste Preference:['Bland' 'Medium-Spicy' 'None' 'Spicy']
 df.to_csv("x.csv")
 
 
-

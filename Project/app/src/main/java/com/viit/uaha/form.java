@@ -41,7 +41,7 @@ public class form extends AppCompatActivity {
     private String messi=null;
     private int target;
     private Random mRandom = new Random();
-
+//Get current email from Firebase
     public String currentEmail()
     {
         FirebaseAuth mAuth;
@@ -78,7 +78,7 @@ public class form extends AppCompatActivity {
 
 
                  DocumentReference noteRef = db.document("Customers/"+currentEmail());
-                //setting conditions
+                //setting conditions (INPUT VALIDATION)
                 int f=0;
                 String validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
 
@@ -444,7 +444,7 @@ public class form extends AppCompatActivity {
                     );
 
 
-//Load model mclassifier intialized null
+//Load model mclassifier RANDOM FOREST
 
                         AssetManager assetManager = getAssets();
                         try {
@@ -693,7 +693,7 @@ public class form extends AppCompatActivity {
                     }
             final String rec1=rec;
 
-// predict and convert
+// PREDICTION AND CONVERSION FROM INT TO STRING AND PASS IT BACK TO MAIN ON OKAY
 
 
                      final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(form.this);
