@@ -1,5 +1,5 @@
 # PersonalizedFoodDeliverySystem
 
-Creating an Android App using android studio in Project Folder
-
-Training ML model using tensorflow in ML folder
+Folders in use:
+-Project ( Contains Android Studio Source Code)
+-ML (Contains preprocessing of data in python)
