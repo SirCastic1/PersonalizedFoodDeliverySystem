@@ -757,7 +757,7 @@ final TextView tv=findViewById(R.id.textView14);
 
 
                                 bmi.setText("\t\t\t\tHeight:" + Height + "\n\n\t\t\t\tWeight:" + Weight + "\n\n\n\t\t\t\tYour Bmi is : " + BMI);
-                                bmi.setTe xtSize(26);
+                                bmi.setTextSize(26);
                             } else {
                                 Toast.makeText(MainActivity.this, "Kindly update preferences in account page", Toast.LENGTH_SHORT).show();
                             }
